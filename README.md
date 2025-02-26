@@ -1,4 +1,3 @@
-![Pac-Man eating my contributions](https://raw.githubusercontent.com/meowmet/Meowmet/main/pacman.svg)
 
 
 <h1 align="center">
