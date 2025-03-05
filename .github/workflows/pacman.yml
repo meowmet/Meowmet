@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate Pac-Man Graph
-        uses: abozanona/pacman-contribution-graph@main
+        uses: meowmet/the-pacman@main  # Correct way to reference your forked repo
         with:
           username: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}  # Make sure the GITHUB_TOKEN secret is set
 
       - name: Commit and Push
         run: |
