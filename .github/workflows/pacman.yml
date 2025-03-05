@@ -3,7 +3,7 @@ name: Generate Pac-Man Contribution Graph
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs daily at midnight
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering from the Actions tab
 
 jobs:
   build:
@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate Pac-Man Graph
-        uses: meowmet/the-pacman/github-action@main  # Pointing to the correct folder with action.yml
+        uses: meowmet/the-pacman/github-action@main
         with:
           username: ${{ github.repository_owner }}
-          token: ${{ secrets.MY_GITHUB_TOKEN }}  # Make sure the MY_GITHUB_TOKEN secret is set
+          token: ${{ secrets.MY_GITHUB_TOKEN }}  # Replace with your secret name
 
       - name: Commit and Push
         run: |
