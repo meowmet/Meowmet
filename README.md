@@ -1,5 +1,5 @@
 # 💫 About Me:
-🚀 Currently diving deep into Python, automation applications, and cybersecurity.<br>🌐Open to collabs! Frontend, backend, AI,CTFs or security.<br>📘 Mastering Python backend & automation, with a side of AI magic.<br>🔍Blending automation and security to make tech work smarter. Curious? Hit me up!<br>
+🚀 Currently diving deep into Python, automation applications, and cybersecurity.<br>🌐Open to collabs! Frontend, backend, AI,CTFs and security.<br>📘 Mastering Python backend & automation, with a side of AI magic.<br>🔍Blending automation and security to make tech work smarter. Curious? Hit me up!<br>
 
 
 # 💻 Tech Stack:
