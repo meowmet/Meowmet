@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>meowmet — AI &amp; Cybersecurity Engineer</title>
+  <meta name="description" content="Portfolio of Nuri (Meowmet) — Atatürk University Computer Engineering 3rd year student specializing in AI/ML and Cybersecurity. 1st Place CTF winner, Teknofest Lead AI Developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="mouse-glow" class="mouse-glow" aria-hidden="true"></div>
+  <div id="mouse-dot" class="mouse-dot" aria-hidden="true"></div>
+  <div id="ripple-container" class="ripple-container" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <div id="onepiece-popup" class="onepiece-popup" aria-hidden="true">
+    <img src="https://i.pinimg.com/originals/69/26/f8/6926f8f7d1bfa846c6c031fc46d18bf7.jpg" alt="The One Piece is Real!" />
+  </div>
+
+  <!-- NAV -->
+  <nav id="main-nav" class="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-bracket">[</span>
+      <span class="nav-logo-text">meowmet</span>
+      <span class="nav-logo-bracket">]</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero"         class="nav-link" data-section="hero">~/home</a>
+      <a href="#stack"        class="nav-link" data-section="stack">~/stack</a>
+      <a href="#projects"     class="nav-link" data-section="projects">~/projects</a>
+      <a href="#achievements" class="nav-link" data-section="achievements">~/fame</a>
+      <a href="#certs"        class="nav-link" data-section="certs">~/certs</a>
+      <a href="#contact"      class="nav-link" data-section="contact">~/contact</a>
+    </div>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="#hero"         class="mobile-nav-link" data-section="hero">~/home</a>
+    <a href="#stack"        class="mobile-nav-link" data-section="stack">~/stack</a>
+    <a href="#projects"     class="mobile-nav-link" data-section="projects">~/projects</a>
+    <a href="#achievements" class="mobile-nav-link" data-section="achievements">~/fame</a>
+    <a href="#certs"        class="mobile-nav-link" data-section="certs">~/certs</a>
+    <a href="#contact"      class="mobile-nav-link" data-section="contact">~/contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="crt-overlay" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="terminal-window hero-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">meowmet@portfolio:~</span>
+        </div>
+        <div class="terminal-body" id="hero-terminal-body">
+          <div class="terminal-history" id="terminal-history"></div>
+          <div class="terminal-input-line" id="terminal-input-line">
+            <span class="prompt" id="terminal-prompt">guest@meowmet:~$&nbsp;</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help'..." />
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// section.02</span>
+        <h2 class="section-title">The Core Stack</h2>
+        <p class="section-subtitle">Dual-Core Architecture</p>
+      </div>
+      <div class="dual-core-grid">
+        <div class="core-card glass" id="ai-core">
+          <div class="core-header">
+            <div class="core-icon ai-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
+                <path d="M6 10v1a6 6 0 0 0 12 0v-1"/><path d="M12 17v5"/><path d="M8 22h8"/>
+                <circle cx="9" cy="7" r="0.5" fill="currentColor"/>
+                <circle cx="15" cy="7" r="0.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div><h3 class="core-title">Intelligence Core</h3><span class="core-label">AI / ML / Data Science</span></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="95">Python <small>(Advanced)</small></span>
+            <span class="skill-tag" data-level="85">Machine Learning</span>
+            <span class="skill-tag" data-level="80">NLP / Transformers</span>
+            <span class="skill-tag" data-level="82">LightGBM</span>
+            <span class="skill-tag" data-level="82">XGBoost</span>
+            <span class="skill-tag" data-level="78">Streamlit</span>
+            <span class="skill-tag" data-level="75">Deep Learning</span>
+            <span class="skill-tag" data-level="72">Data Pipelines</span>
+          </div>
+          <div class="core-visual"><div class="neural-net" id="neural-net" aria-hidden="true"></div></div>
+        </div>
+
+        <div class="core-card glass" id="sec-core">
+          <div class="core-header">
+            <div class="core-icon sec-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2l8 4v6c0 5.25-3.5 9.75-8 11-4.5-1.25-8-5.75-8-11V6l8-4z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <div><h3 class="core-title">Security Core</h3><span class="core-label">Offensive Security / CTF</span></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="88">Penetration Testing</span>
+            <span class="skill-tag" data-level="85">Metasploit</span>
+            <span class="skill-tag" data-level="88">Kali Linux</span>
+            <span class="skill-tag" data-level="80">Web Security</span>
+            <span class="skill-tag" data-level="82">CTF / OSINT</span>
+            <span class="skill-tag" data-level="75">DoS / DDoS Defense</span>
+            <span class="skill-tag" data-level="78">Network Security</span>
+          </div>
+          <div class="core-visual"><div class="shield-anim" id="shield-anim" aria-hidden="true"></div></div>
+        </div>
+
+        <div class="core-card glass full-width" id="ops-core">
+          <div class="core-header">
+            <div class="core-icon ops-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M6 8l4 4-4 4"/><path d="M12 16h6"/>
+              </svg>
+            </div>
+            <div><h3 class="core-title">General Ops</h3><span class="core-label">Languages · Systems · Tools</span></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="92">Linux Terminal <small>(Advanced)</small></span>
+            <span class="skill-tag" data-level="88">Git</span>
+            <span class="skill-tag" data-level="80">SQL <small>(MySQL, MS SQL)</small></span>
+            <span class="skill-tag" data-level="78">C++</span>
+            <span class="skill-tag" data-level="72">C# / C / Java</span>
+            <span class="skill-tag" data-level="75">Flask</span>
+            <span class="skill-tag" data-level="70">React / JavaScript</span>
+            <span class="skill-tag" data-level="70">HTML5 / CSS3</span>
+            <span class="skill-tag" data-level="68">Selenium / Automation</span>
+            <span class="skill-tag" data-level="65">Batch Scripting</span>
+            <span class="skill-tag" data-level="72">Firebase</span>
+            <span class="skill-tag" data-level="60">Docker <small>(basics)</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// section.03</span>
+        <h2 class="section-title">Project Vault</h2>
+        <p class="section-subtitle">Interactive Mission Gallery — click any card</p>
+      </div>
+      <div class="project-filters" id="project-filters">
+        <button class="filter-btn active" data-filter="all">all_projects</button>
+        <button class="filter-btn" data-filter="ai">ai_flagships</button>
+        <button class="filter-btn" data-filter="security">security_systems</button>
+        <button class="filter-btn" data-filter="automation">automation</button>
+        <button class="filter-btn" data-filter="web">web_apps</button>
+      </div>
+      <div class="projects-bento" id="projects-grid">
+
+        <div class="project-card glass" data-category="ai"
+          data-title="Rainsense"
+          data-status="ACTIVE — Teknofest 2026" data-status-type="live"
+          data-role="Lead AI Developer"
+          data-desc="Smart Agriculture AI system for Teknofest 2026 AgriTech competition. Predicts crop health using real-time weather and soil sensor data with advanced ML pipelines. Integrates IoT sensor arrays, data preprocessing, and ensemble model predictions into a unified dashboard."
+          data-tech="Python,Machine Learning,IoT,Data Pipeline,Streamlit,Sensors"
+          data-md="rainsense">
+          <div class="project-status live"><span class="status-dot"></span> ACTIVE — Teknofest 2026</div>
+          <h3 class="project-name">Rainsense</h3>
+          <p class="project-desc">Smart AgriTech AI — crop health prediction from weather &amp; soil data.</p>
+          <div class="project-role"><span class="role-badge">Lead AI Developer</span></div>
+          <div class="project-tech"><span>Python</span><span>ML</span><span>IoT</span><span>Data Pipeline</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="ai"
+          data-title="Tanımatık"
+          data-status="ACTIVE — Teknofest 2026" data-status-type="live"
+          data-role="Lead AI Developer"
+          data-desc="Medical Diagnosis AI system for Teknofest 2026 Healthcare AI track. Builds intelligent diagnostic tools assisting healthcare professionals with image-based analysis. Uses deep learning pipelines trained on medical imaging datasets for real-world clinical assistance."
+          data-tech="Python,Deep Learning,Medical AI,Computer Vision,CNN"
+          data-md="tanimatik">
+          <div class="project-status live"><span class="status-dot"></span> ACTIVE — Teknofest 2026</div>
+          <h3 class="project-name">Tanımatık</h3>
+          <p class="project-desc">Medical image-based AI diagnostic assistant for healthcare professionals.</p>
+          <div class="project-role"><span class="role-badge">Lead AI Developer</span></div>
+          <div class="project-tech"><span>Python</span><span>Deep Learning</span><span>Medical AI</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="ai"
+          data-title="Deep Past Initiative"
+          data-status="Kaggle Top 25%" data-status-type="kaggle"
+          data-role="Solo Developer"
+          data-desc="NLP architecture for translating Ancient Akkadian cuneiform tablets to modern English. Fine-tuned a ByT5 Transformer model on historical linguistic datasets. Competed on Kaggle achieving Top 25% globally — pushing boundaries of what language models can do with ancient scripts."
+          data-tech="NLP,Transformer,ByT5,Python,Kaggle,Fine-tuning"
+          data-md="deep_past">
+          <div class="project-status kaggle"><span class="status-dot"></span> Kaggle Top 25%</div>
+          <h3 class="project-name">Deep Past Initiative</h3>
+          <p class="project-desc">ByT5 Transformer translating Ancient Akkadian cuneiform → English.</p>
+          <div class="project-tech"><span>NLP</span><span>Transformer</span><span>Python</span><span>Kaggle</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="ai"
+          data-title="MeowTools"
+          data-status="Portfolio Project" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Custom cryptography and encryption toolkit built in Python. A modular library of cipher implementations, hash utilities, and key management tools — built for learning and practical use. Zero dependencies on third-party crypto libraries for the core algorithms."
+          data-tech="Python,Cryptography,Encryption,CLI"
+          data-md="meowtools">
+          <div class="project-status"><span class="status-dot"></span> Portfolio Project</div>
+          <h3 class="project-name">MeowTools</h3>
+          <p class="project-desc">Custom Python cryptography &amp; encryption toolkit. No bloat, just ciphers.</p>
+          <div class="project-tech"><span>Python</span><span>Cryptography</span><span>CLI</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="security"
+          data-title="FASPA"
+          data-status="Open Source" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Fast and Secure Personal Assistant built in C++. High-performance local AI assistant with AES-encrypted data handling, zero telemetry, and zero cloud dependency. Designed for developers who refuse to send their data to a server they don't control."
+          data-tech="C++,Encryption,CLI,AES,Local AI,Security"
+          data-md="faspa">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">FASPA</h3>
+          <p class="project-desc">C++ local AI assistant — encrypted, zero telemetry, zero cloud.</p>
+          <div class="project-tech"><span>C++</span><span>Encryption</span><span>CLI</span><span>Security</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="security"
+          data-title="Guard-PC"
+          data-status="Open Source" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Telegram-integrated PC monitoring &amp; security tool. Delivers real-time system alerts, screenshot capture, webcam snapshots, location data, and remote command execution — all through a Telegram bot. Zero central server required."
+          data-tech="Python,Telegram API,Monitoring,Security,Automation"
+          data-md="guard_pc">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">Guard-PC</h3>
+          <p class="project-desc">Telegram-controlled remote PC monitor: webcam, screenshots &amp; alerts.</p>
+          <div class="project-tech"><span>Python</span><span>Telegram API</span><span>Monitoring</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="security"
+          data-title="Web Monitoring PBL"
+          data-status="Open Source" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="PBL project: downloader &amp; monitoring tool that logs browsing history, passwords, and screenshots — all synced to Firebase. Built for understanding how endpoint monitoring works from a red-team perspective. Educational offensive security tool."
+          data-tech="Python,Firebase,Security,Logging,Automation"
+          data-md="web_monitoring_pbl">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">Web Monitoring PBL</h3>
+          <p class="project-desc">Browser history, password &amp; screenshot logger synced to Firebase.</p>
+          <div class="project-tech"><span>Python</span><span>Firebase</span><span>Security</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="security"
+          data-title="One Piece GRUB Theme"
+          data-status="Open Source" data-status-type=""
+          data-role="Designer &amp; Developer"
+          data-desc="Because why boot into a boring GRUB menu when you can boot into the Grand Line? A custom-designed anime-inspired GRUB2 bootloader theme for Linux enthusiasts with taste. Minimal, clean, and unmistakably One Piece."
+          data-tech="GRUB2,Linux,UI Design,Shell"
+          data-md="one_piece_grub_theme">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">One Piece GRUB Theme</h3>
+          <p class="project-desc">Anime-inspired GRUB2 bootloader theme. Boring boot screens are illegal.</p>
+          <div class="project-tech"><span>GRUB2</span><span>Linux</span><span>UI Design</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="automation"
+          data-title="Autocell"
+          data-status="Open Source" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Python automation app for Excel &amp; Word with auto-click and keyboard macros. Saves hours of repetitive office work through configurable task sequences. Simple GUI frontend, powerful macro engine underneath."
+          data-tech="Python,Excel,Word,Automation,Macros,GUI"
+          data-md="autocell">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">Autocell</h3>
+          <p class="project-desc">Excel &amp; Word automation with auto-click and keyboard macro sequences.</p>
+          <div class="project-tech"><span>Python</span><span>Excel</span><span>Automation</span><span>Macros</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="automation"
+          data-title="Google Maps Scraper"
+          data-status="Open Source" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Python Tkinter GUI app using Selenium and multithreading to scrape business data from Google Maps. Features intelligent caching, CSV export, and a clean UI for batch collection. Fast, threaded, and polite to rate limits."
+          data-tech="Python,Selenium,Tkinter,Multithreading,CSV,Web Scraping"
+          data-md="maps_scraper">
+          <div class="project-status"><span class="status-dot"></span> Open Source</div>
+          <h3 class="project-name">Google Maps Scraper</h3>
+          <p class="project-desc">Multithreaded Selenium scraper for Maps business data — caching + CSV.</p>
+          <div class="project-tech"><span>Python</span><span>Selenium</span><span>Multithreading</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="automation"
+          data-title="Daily Vocab Bot"
+          data-status="Active" data-status-type="live"
+          data-role="Solo Developer"
+          data-desc="Telegram bot that sends curated Turkish vocabulary words daily with images to study groups. Part of the Bahasakedi language learning ecosystem. Schedules, curates, and delivers language content automatically via bot."
+          data-tech="Python,Telegram API,Bot,Automation,NLP"
+          data-md="vocab_bot">
+          <div class="project-status live"><span class="status-dot"></span> Active</div>
+          <h3 class="project-name">Daily Vocab Bot</h3>
+          <p class="project-desc">Telegram bot delivering daily Turkish vocabulary with images to study groups.</p>
+          <div class="project-tech"><span>Python</span><span>Telegram API</span><span>Bot</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="web"
+          data-title="Event Management System"
+          data-status="Portfolio Project" data-status-type=""
+          data-role="Full-Stack Developer"
+          data-desc="Full-stack Flask &amp; React application with user roles, event recommendations, weather API integration, and a ticket cart system. Designed for managing real events with authentication, role-based access control, and a responsive frontend."
+          data-tech="Flask,React,Python,JavaScript,HTML5,CSS3,Weather API"
+          data-md="event_management_system">
+          <div class="project-status"><span class="status-dot"></span> Portfolio Project</div>
+          <h3 class="project-name">Event Management System</h3>
+          <p class="project-desc">Flask + React: user roles, event recs, weather API, ticket cart.</p>
+          <div class="project-tech"><span>Flask</span><span>React</span><span>Python</span><span>Weather API</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="web"
+          data-title="Bahasakedi"
+          data-status="In Progress" data-status-type="live"
+          data-role="Creator"
+          data-desc="Language learning platform and content project: teaching Indonesians Turkish and Turks Indonesian. Combines a bilingual web app with community content. Nuri speaks Indonesian at near-native level — this project is built from real fluency, not a translation API."
+          data-tech="Web,Language Learning,Content,Indonesian,Turkish,Community"
+          data-md="bahasakedi">
+          <div class="project-status live"><span class="status-dot"></span> In Progress</div>
+          <h3 class="project-name">Bahasakedi</h3>
+          <p class="project-desc">Bilingual Turkish ↔ Indonesian language learning platform &amp; content project.</p>
+          <div class="project-tech"><span>Web</span><span>Indonesian</span><span>Turkish</span><span>Content</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="web"
+          data-title="HatimReader"
+          data-status="Portfolio Project" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Dynamic web application for tracking Quran recitation cycles (Hatim). Features multi-language support, personal progress tracking, and community sharing. Clean, respectful UI designed for daily use by religious communities."
+          data-tech="Web,JavaScript,HTML5,CSS3,Community,Multi-language"
+          data-md="hatimreader">
+          <div class="project-status"><span class="status-dot"></span> Portfolio Project</div>
+          <h3 class="project-name">HatimReader</h3>
+          <p class="project-desc">Quran recitation cycle tracker with multi-language support &amp; community sharing.</p>
+          <div class="project-tech"><span>JS</span><span>HTML5</span><span>CSS3</span><span>Community</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <div class="project-card glass" data-category="web"
+          data-title="Aqaq"
+          data-status="Portfolio Project" data-status-type=""
+          data-role="Solo Developer"
+          data-desc="Web-based challenge tracker and calendar for two users. Features shared progress tracking, daily challenge streaks, and reward GIFs for motivation. Minimal UI, maximum accountability."
+          data-tech="Web,JavaScript,HTML5,CSS3,Challenge Tracker"
+          data-md="aqaq">
+          <div class="project-status"><span class="status-dot"></span> Portfolio Project</div>
+          <h3 class="project-name">Aqaq</h3>
+          <p class="project-desc">Two-user challenge tracker with streaks, calendar, and reward GIFs.</p>
+          <div class="project-tech"><span>JS</span><span>HTML5</span><span>CSS3</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HALL OF FAME -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// section.04</span>
+        <h2 class="section-title">Hall of Fame</h2>
+        <p class="section-subtitle">cat ~/achievements/ranked.log</p>
+      </div>
+      <div class="scoreboard-terminal glass">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">achievements@meowmet:~$ cat ranked.log</span>
+        </div>
+        <div class="scoreboard-body" id="scoreboard-body">
+          <div class="score-row score-gold" data-index="0">
+            <div class="score-rank">#01</div><div class="score-bar-accent gold-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-ctf">CTF</span><span class="score-place">1st Place</span><span class="score-org">Atasiber</span></div>
+              <h3 class="score-title">SPEED HACK: EXPLOIT RUN</h3>
+              <div class="score-meta"><span class="score-cat">Cybersecurity Competition</span><span class="score-year">Dec 2025</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">1st</span><span class="score-num-label">place</span></div>
+            <div class="score-scanline"></div>
+          </div>
+          <div class="score-row score-silver" data-index="1">
+            <div class="score-rank">#02</div><div class="score-bar-accent silver-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-ml">ML</span><span class="score-place">3rd Place</span><span class="score-org">AI Spark</span></div>
+              <h3 class="score-title">AI Hackathon — Property Estimation</h3>
+              <div class="score-meta"><span class="score-cat">LightGBM / XGBoost Pipeline</span><span class="score-year">2025</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">3rd</span><span class="score-num-label">place</span></div>
+            <div class="score-scanline"></div>
+          </div>
+          <div class="score-row score-cyan" data-index="2">
+            <div class="score-rank">#03</div><div class="score-bar-accent cyan-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-kaggle">Kaggle</span><span class="score-place">Rank 41 / 659</span><span class="score-org">Kaggle</span></div>
+              <h3 class="score-title">Customer Churn Prediction</h3>
+              <div class="score-meta"><span class="score-cat">Tabular ML — Score: 1.23938</span><span class="score-year">2025</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">6%</span><span class="score-num-label">top</span></div>
+            <div class="score-scanline"></div>
+          </div>
+          <div class="score-row score-cyan" data-index="3">
+            <div class="score-rank">#04</div><div class="score-bar-accent cyan-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-kaggle">Datathon</span><span class="score-place">Top 7%</span><span class="score-org">ING Hubs Türkiye</span></div>
+              <h3 class="score-title">ING Hubs Türkiye Datathon</h3>
+              <div class="score-meta"><span class="score-cat">Kaggle Data Science Competition</span><span class="score-year">2025</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">7%</span><span class="score-num-label">top</span></div>
+            <div class="score-scanline"></div>
+          </div>
+          <div class="score-row score-purple" data-index="4">
+            <div class="score-rank">#05</div><div class="score-bar-accent purple-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-nlp">NLP</span><span class="score-place">Top 25%</span><span class="score-org">Kaggle</span></div>
+              <h3 class="score-title">Deep Past Initiative — Akkadian Translation</h3>
+              <div class="score-meta"><span class="score-cat">Ancient Cuneiform → English · ByT5</span><span class="score-year">2026</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">25%</span><span class="score-num-label">top</span></div>
+            <div class="score-scanline"></div>
+          </div>
+          <div class="score-footer">
+            <span class="prompt">meowmet@2026:~$</span>
+            <span class="blink-cursor">█</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS — ACCORDION -->
+  <section id="certs" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// section.05</span>
+        <h2 class="section-title">Certification Terminal</h2>
+        <p class="section-subtitle">cat ~/certs/*.pem</p>
+      </div>
+      <div class="certs-accordion" id="certs-accordion">
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">BTK Academy</span>
+        <span class="cert-group-count">10 certificates</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">📊</div>
+          <div class="cert-info"><span class="cert-name">Veri Bilimi için Temel İstatistik</span><span class="cert-issuer">BTK Academy · Feb 2026</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=bx1hLo8zXP" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-info"><span class="cert-name">Python ile Makine Öğrenmesi</span><span class="cert-issuer">BTK Academy · Dec 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=rKjhGb7Pgp" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-info"><span class="cert-name">Makine Öğrenmesi</span><span class="cert-issuer">BTK Academy · Dec 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Yx1hP1KdWl" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-info"><span class="cert-name">DoS / DDoS Saldırıları ve Koruma</span><span class="cert-issuer">BTK Academy · Nov 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=ZA1UryzPpJ" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-info"><span class="cert-name">Sıfırdan İleri Seviye Python Programlama</span><span class="cert-issuer">BTK Academy · Oct 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=L8dckAzAb" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🔢</div>
+          <div class="cert-info"><span class="cert-name">Algoritma, Programlama ve Veri Yapılarına Giriş</span><span class="cert-issuer">BTK Academy · Oct 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=ZA1UryMZGx" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🔒</div>
+          <div class="cert-info"><span class="cert-name">Siber Güvenlikte Linux İşletim Sistemleri</span><span class="cert-issuer">BTK Academy · Sep 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=rKjhaaKkgP" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">💻</div>
+          <div class="cert-info"><span class="cert-name">İşletim Sistemlerine Giriş</span><span class="cert-issuer">BTK Academy · Sep 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=ZA1UryMZGx" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-info"><span class="cert-name">Siber Güvenliğe Giriş</span><span class="cert-issuer">BTK Academy · Feb 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=GoDfnW0DLX" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">⚙️</div>
+          <div class="cert-info"><span class="cert-name">C++ ile Programlamaya Giriş</span><span class="cert-issuer">BTK Academy · May 2024</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=PVghbN9exn" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">Harvard University</span>
+        <span class="cert-group-count">1 certificate</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">📜</div>
+          <div class="cert-info"><span class="cert-name">CS50x — Introduction to Computer Science</span><span class="cert-issuer">Harvard University · Dec 2024</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://cs50.harvard.edu/certificates/7ebee70d-181c-4aff-8003-4962d7684eb9" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">Google Cloud</span>
+        <span class="cert-group-count">1 certificate</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-info"><span class="cert-name">Introduction to Data Engineering</span><span class="cert-issuer">Google Cloud Skills Boost · Mar 2026</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.linkedin.com/company/98808973/" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">Cisco Networking Academy</span>
+        <span class="cert-group-count">1 certificate</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">🐧</div>
+          <div class="cert-info"><span class="cert-name">Linux Unhatched</span><span class="cert-issuer">Cisco Networking Academy · Feb 2026</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://www.credly.com/badges/51244ab3-6950-4068-9527-ee4f8db4032a" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">Akbank</span>
+        <span class="cert-group-count">1 certificate</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">🔐</div>
+          <div class="cert-info"><span class="cert-name">Siber Güvenlik 101</span><span class="cert-issuer">Akbank · Oct 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://akbank-genclik-akademisi.verified.cv/tr/verify/68992721279187" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">GDG on Campus</span>
+        <span class="cert-group-count">1 certificate</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">⚡</div>
+          <div class="cert-info"><span class="cert-name">AI Spark Hackathon — Participation</span><span class="cert-issuer">GDG on Campus Atatürk Uni · Dec 2025</span></div>
+          <span class="cert-status verified">✓ VERIFIED</span>
+          <a href="https://gmail137.verified.cv/en/verify/77233891374260" class="cert-verify" target="_blank" rel="noopener noreferrer">Verify 🔗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// section.06</span>
+        <h2 class="section-title">Establish Connection</h2>
+        <p class="section-subtitle">ssh meowmet@connect</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-terminal glass">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">connect@meowmet:~</span>
+            </div>
+            <div class="terminal-body">
+              <p class="terminal-line"><span class="prompt">meowmet:~$</span><span class="command-text"> echo "Let's build something extraordinary"</span></p>
+              <p class="terminal-output">"Let's build something extraordinary"</p>
+              <p class="terminal-line"><span class="prompt">meowmet:~$</span><span class="command-text"> cat social_links.json</span></p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="social-link glass">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span><span class="link-handle">@meowmet</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mehmet-nuri-erkan-97b024347/" target="_blank" rel="noopener noreferrer" class="social-link glass">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span><span class="link-handle">Mehmet Nuri Erkan</span>
+            </a>
+            <a href="https://tryhackme.com/p/meowmet" target="_blank" rel="noopener noreferrer" class="social-link glass">
+              <!-- TryHackMe Official Shield Logo -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.26 4.26 0 0 0-4.33 4.249c0 2.373 1.67 4.128 4.33 4.249v.002h2.602l2.156-2.148-.001-.003h-4.12c-1.469 0-2.532-.854-2.532-2.1 0-1.247 1.089-2.25 2.531-2.25h.734l.112-.727C6.26 3.785 8.234 2.148 10.705 2.148c2.853 0 5.168 2.333 5.168 5.209v.883l.87.116c1.417.188 2.462 1.282 2.462 2.717 0 1.257-.831 2.1-2.531 2.1h-3.494l-4.058 4.033-.002.001 2.156 2.147v-.003h5.398c3.131 0 4.966-2.073 4.966-4.278a4.652 4.652 0 0 0-3.252-4.327C18.122 4.267 14.787 0 10.705 0zm-.43 9.1l-5.44 5.416 5.44 5.414 2.16-2.15-3.278-3.264 3.278-3.264-2.16-2.151z" fill="#ef3b2d"/></svg>
+              <span>TryHackMe</span><span class="link-handle">@meowmet</span>
+            </a>
+            <a href="https://t.me/miyavmet" target="_blank" rel="noopener noreferrer" class="social-link glass">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span><span class="link-handle">@miyavmet</span>
+            </a>
+            <a href="https://medium.com/@meowmetnuwri" target="_blank" rel="noopener noreferrer" class="social-link glass">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+              <span>Medium</span><span class="link-handle">@meowmetnuwri</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text"><span class="prompt-mini">meowmet@2026:~$</span> echo "Designed &amp; built with 💚 by meowmet"</p>
+      <p class="footer-sub">© 2026 — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box glass">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-status-wrap">
+        <div id="modal-status-badge" class="project-status"></div>
+      </div>
+      <h2 id="modal-title" class="modal-title"></h2>
+      <div id="modal-role-wrap" class="project-role" style="margin-bottom:1rem"></div>
+      <p id="modal-desc" class="modal-desc"></p>
+      <div id="modal-tech" class="modal-tech project-tech"></div>
+      <div class="modal-terminal-line">
+        <span class="prompt">meowmet:~$</span>
+        <span id="modal-cmd" class="command-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SU ROOT PASSWORD OVERLAY -->
+  <div id="su-overlay" class="su-overlay" aria-hidden="true">
+    <div class="su-box">
+      <div class="su-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="su-title">su — authentication</span>
+      </div>
+      <div class="su-body">
+        <p class="su-prompt-text">Password: </p>
+        <input type="password" id="su-password-input" class="su-input" autocomplete="off" spellcheck="false" />
+        <p class="su-hint" id="su-hint"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- FLAG{th3_r3al_tr34sur3_w4s_th3_c0d3_al0ng} -->
