@@ -37,12 +37,18 @@
   TryHackMe: Top 6% Offensive Security Researcher
   Kaggle:    Top 7% (ING NLP) | Top 25% (NLP Challenge)
   Status:    Searching for extraordinary things to build...
-$ cat social_links.json
-JSON
+
+
+### $ ssh meowmet@connect
+
+meowmet:~$ echo "Let's build something extraordinary"
+"Let's build something extraordinary"
+
+meowmet:~$ cat social_links.json
 {
-  "identity":  "Mehmet Nuri Erkan",
-  "portfolio": "[https://meowmet.github.io/Meowmet](https://meowmet.github.io/Meowmet)",
-  "github":    "@meowmet",
-  "telegram":  "@miyavmet",
-  "mission":   "Building the future, one commit at a time."
-}
+  "portfolio": "https://meowmet.github.io/Meowmet/",
+  "github": "https://github.com/meowmet",
+  "linkedin": "https://www.linkedin.com/in/mehmet-nuri-erkan-97b024347/",
+  "telegram": "https://t.me/miyavmet",
+  "medium": "https://medium.com/@meowmetnuwri"
+}"
