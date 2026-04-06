@@ -39,16 +39,28 @@
   Status:    Searching for extraordinary things to build...
 
 
-### $ ssh meowmet@connect
+<div align="center">
+  <img src="terminal.svg" alt="Meowmet Terminal" width="700">
+  
+  <br><br>
 
-meowmet:~$ echo "Let's build something extraordinary"
-"Let's build something extraordinary"
-
-meowmet:~$ cat social_links.json
-{
-  "portfolio": "https://meowmet.github.io/Meowmet/",
-  "github": "https://github.com/meowmet",
-  "linkedin": "https://www.linkedin.com/in/mehmet-nuri-erkan-97b024347/",
-  "telegram": "https://t.me/miyavmet",
-  "medium": "https://medium.com/@meowmetnuwri"
-}"
+  <a href="https://meowmet.github.io/Meowmet/" style="text-decoration: none; color: inherit;">
+    <img src="https://cdn.simpleicons.org/googlechrome/888888" width="16" align="center" alt="Portfolio"/> Portfolio
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <a href="https://github.com/meowmet" style="text-decoration: none; color: inherit;">
+    <img src="https://cdn.simpleicons.org/github/888888" width="16" align="center" alt="GitHub"/> GitHub
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <a href="https://www.linkedin.com/in/mehmet-nuri-erkan-97b024347/" style="text-decoration: none; color: inherit;">
+    <img src="https://cdn.simpleicons.org/linkedin/888888" width="16" align="center" alt="LinkedIn"/> LinkedIn
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <a href="https://t.me/miyavmet" style="text-decoration: none; color: inherit;">
+    <img src="https://cdn.simpleicons.org/telegram/888888" width="16" align="center" alt="Telegram"/> Telegram
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <a href="https://medium.com/@meowmetnuwri" style="text-decoration: none; color: inherit;">
+    <img src="https://cdn.simpleicons.org/medium/888888" width="16" align="center" alt="Medium"/> Medium
+  </a>
+</div>
