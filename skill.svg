@@ -1,0 +1,140 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+  text, tspan { font-family: monospace; }
+  .c-blue   { fill: #58a6ff; }
+  .c-red    { fill: #ff7b72; }
+  .c-green  { fill: #7ee787; }
+  .c-yellow { fill: #e3b341; }
+  .c-muted  { fill: #8b949e; }
+  .c-light  { fill: #cdd9e5; }
+  .c-orange { fill: #ffa657; }
+  .c-purple { fill: #d2a8ff; }
+  .c-status { fill: #3fb950; }
+
+  .fs-10 { font-size: 10px; }
+  .fs-11 { font-size: 11px; }
+  .fs-12 { font-size: 12px; }
+  .fw-7  { font-weight: 700; }
+  .ta-m  { text-anchor: middle; }
+
+  .cursor { animation: blink 1s step-start infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  /* Pulse animations */
+  .pb { animation: pulse-b 3s ease-in-out infinite; }
+  .pr { animation: pulse-r 3s ease-in-out .8s infinite; }
+  @keyframes pulse-b { 0%,100%{ filter:brightness(1); } 50%{ filter:brightness(1.3); } }
+  @keyframes pulse-r { 0%,100%{ filter:brightness(1); } 50%{ filter:brightness(1.3); } }
+</style>
+</defs>
+
+<rect width="800" height="450" rx="10" fill="#0d1117"/>
+
+<rect width="800" height="36" rx="10" fill="#161b22"/>
+<rect y="26" width="800" height="10" fill="#161b22"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+<circle cx="40" cy="18" r="6" fill="#febc2e"/>
+<circle cx="60" cy="18" r="6" fill="#28c840"/>
+<text x="400" y="22" class="c-muted fs-12 ta-m">htop -- meowmet -- dual-core architecture</text>
+
+<text x="16"  y="59" class="c-blue  fs-11 fw-7">CPU[0] INTELLIGENCE</text>
+<text x="402" y="59" class="c-red   fs-11 fw-7">CPU[1] SECURITY</text>
+<line x1="400" y1="44" x2="400" y2="212" stroke="#30363d" stroke-width="1"/>
+
+<text x="16" y="80" class="c-blue fs-11 fw-7">┌─ Core 0: Intelligence ─────────────┐</text>
+<text x="24" y="97" class="c-muted fs-10">PyTorch     </text>
+<rect x="110" y="88" width="148" height="9" rx="2" fill="#21262d"/>
+<rect x="110" y="88" width="135" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="97" class="c-blue fs-10">[Advanced]</text>
+
+<text x="24" y="114" class="c-muted fs-10">Transformers</text>
+<rect x="110" y="105" width="148" height="9" rx="2" fill="#21262d"/>
+<rect x="110" y="105" width="112" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="114" class="c-blue fs-10">[Proficient]</text>
+
+<text x="24" y="131" class="c-muted fs-10">NLP         </text>
+<rect x="110" y="122" width="148" height="9" rx="2" fill="#21262d"/>
+<rect x="110" y="122" width="112" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="131" class="c-blue fs-10">[Proficient]</text>
+
+<text x="24" y="148" class="c-muted fs-10">Scikit-learn</text>
+<rect x="110" y="139" width="148" height="9" rx="2" fill="#21262d"/>
+<rect x="110" y="139" width="135" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="148" class="c-blue fs-10">[Advanced]</text>
+
+<text x="20" y="175" class="c-muted fs-10">└─ Mission: <tspan class="c-yellow">Rainsense AI</tspan> <tspan fill="#484f58">(Pending)</tspan></text>
+<text x="16" y="195" class="c-blue fs-11">└────────────────────────────────────┘</text>
+
+<text x="404" y="80" class="c-red fs-11 fw-7">┌─ Core 1: Offensive Sec ─────────────┐</text>
+<text x="412" y="97" class="c-muted fs-10">Pentesting  </text>
+<rect x="502" y="88" width="120" height="9" rx="2" fill="#21262d"/>
+<rect x="502" y="88" width="110" height="9" rx="2" fill="#5a1a1a" class="pr"/>
+<text x="626" y="97" class="c-red fs-10">[Advanced]</text>
+
+<text x="412" y="114" class="c-muted fs-10">Kali Linux  </text>
+<rect x="502" y="105" width="120" height="9" rx="2" fill="#21262d"/>
+<rect x="502" y="105" width="120" height="9" rx="2" fill="#5a1a1a" class="pr"/>
+<text x="626" y="114" class="c-red fs-10">[Hardened]</text>
+
+<text x="412" y="131" class="c-muted fs-10">AES-256/C++ </text>
+<rect x="502" y="122" width="120" height="9" rx="2" fill="#21262d"/>
+<rect x="502" y="122" width="94" height="9" rx="2" fill="#5a1a1a" class="pr"/>
+<text x="626" y="131" class="c-red fs-10">[Proficient]</text>
+
+<text x="412" y="148" class="c-muted fs-10">Metasploit  </text>
+<rect x="502" y="139" width="120" height="9" rx="2" fill="#21262d"/>
+<rect x="502" y="139" width="110" height="9" rx="2" fill="#5a1a1a" class="pr"/>
+<text x="626" y="148" class="c-red fs-10">[Advanced]</text>
+
+<text x="412" y="175" class="c-muted fs-10">└─ Status: <tspan class="c-green">THM Top 6%</tspan> <tspan class="c-muted">Researcher</tspan></text>
+<text x="404" y="195" class="c-red fs-11">└────────────────────────────────────┘</text>
+
+<line x1="10" y1="212" x2="790" y2="212" stroke="#30363d" stroke-width="1"/>
+<text x="16" y="230" class="c-yellow fs-11 fw-7">┌─ MEM: SHARED TECH STACK ──────────────────────────────────────────┐</text>
+
+<text x="20" y="255" class="c-muted fs-10">Web:</text>
+<g transform="translate(60, 244)">
+  <rect width="45" height="15" rx="3" fill="#1a3a2a"/><text x="22.5" y="11" class="c-green fs-10 ta-m">Flask</text>
+  <rect x="50" width="45" height="15" rx="3" fill="#1a3a2a"/><text x="72.5" y="11" class="c-green fs-10 ta-m">MySQL</text>
+  <rect x="100" width="30" height="15" rx="3" fill="#1a3a2a"/><text x="115" y="11" class="c-green fs-10 ta-m">JS</text>
+  <rect x="135" width="75" height="15" rx="3" fill="#1a3a2a"/><text x="172.5" y="11" class="c-green fs-10 ta-m">HTML5/CSS3</text>
+  <rect x="215" width="60" height="15" rx="3" fill="#1a3a2a"/><text x="245" y="11" class="c-green fs-10 ta-m">Firebase</text>
+</g>
+
+<text x="20" y="280" class="c-muted fs-10">Lang:</text>
+<g transform="translate(60, 269)">
+  <rect width="25" height="15" rx="3" fill="#1a2a4a"/><text x="12.5" y="11" class="c-blue fs-10 ta-m">C</text>
+  <rect x="30" width="35" height="15" rx="3" fill="#1a2a4a"/><text x="47.5" y="11" class="c-blue fs-10 ta-m">C++</text>
+  <rect x="70" width="30" height="15" rx="3" fill="#1a2a4a"/><text x="85" y="11" class="c-blue fs-10 ta-m">C#</text>
+  <rect x="105" width="50" height="15" rx="3" fill="#1a2a4a"/><text x="130" y="11" class="c-blue fs-10 ta-m">Python</text>
+  <rect x="160" width="55" height="15" rx="3" fill="#1a2a4a"/><text x="187.5" y="11" class="c-blue fs-10 ta-m">MATLAB</text>
+</g>
+
+<text x="20" y="305" class="c-muted fs-10">Ops:</text>
+<g transform="translate(60, 294)">
+  <rect width="45" height="15" rx="3" fill="#2a1a3a"/><text x="22.5" y="11" class="c-purple fs-10 ta-m">Linux</text>
+  <rect x="50" width="35" height="15" rx="3" fill="#2a1a3a"/><text x="67.5" y="11" class="c-purple fs-10 ta-m">Git</text>
+  <rect x="90" width="50" height="15" rx="3" fill="#2a1a3a"/><text x="115" y="11" class="c-purple fs-10 ta-m">Docker</text>
+  <rect x="145" width="45" height="15" rx="3" fill="#2a1a3a"/><text x="167.5" y="11" class="c-purple fs-10 ta-m">Batch</text>
+  <rect x="195" width="75" height="15" rx="3" fill="#2a1a3a"/><text x="232.5" y="11" class="c-purple fs-10 ta-m">PowerShell</text>
+</g>
+
+<text x="20" y="330" class="c-muted fs-10">Tools:</text>
+<g transform="translate(60, 319)">
+  <rect width="60" height="15" rx="3" fill="#2a1f10"/><text x="30" y="11" class="c-orange fs-10 ta-m">VS Code</text>
+  <rect x="65" width="40" height="15" rx="3" fill="#2a1f10"/><text x="85" y="11" class="c-orange fs-10 ta-m">Kali</text>
+  <rect x="110" width="100" height="15" rx="3" fill="#2a1f10"/><text x="160" y="11" class="c-orange fs-10 ta-m">Linux Terminal</text>
+</g>
+
+<text x="16" y="355" class="c-yellow fs-11">└───────────────────────────────────────────────────────────────────┘</text>
+
+<text x="16" y="390" class="c-green fs-12 fw-7">root@meowmet:~# <tspan class="c-light cursor">█</tspan></text>
+
+<rect x="0" y="428" width="800" height="22" fill="#161b22"/>
+<rect x="0" y="428" width="800" height="2"  fill="#0d1117"/>
+<text x="16"  y="443" class="c-status fs-10">● ONLINE</text>
+<text x="120" y="443" class="c-muted  fs-10">meowmet · Computer Engineering · TR</text>
+<text x="740" y="443" class="c-muted  fs-10">UTF-8</text>
+
+</svg>
