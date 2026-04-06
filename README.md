@@ -49,7 +49,7 @@
   </a> &nbsp;&nbsp;&nbsp;&nbsp;
   
   <a href="https://www.linkedin.com/in/mehmet-nuri-erkan-97b024347/" style="text-decoration: none; color: inherit;">
-    <img src="https://cdn.simpleicons.org/linkedin/888888" width="16" align="center" alt="LinkedIn"/> LinkedIn
+    <img src="https://cdn.pixabay.com/photo/2017/12/06/04/57/linkedin-3000959_1280.png" width="16" align="center" alt="LinkedIn"/> LinkedIn
   </a> &nbsp;&nbsp;&nbsp;&nbsp;
   
   <a href="https://t.me/miyavmet" style="text-decoration: none; color: inherit;">
