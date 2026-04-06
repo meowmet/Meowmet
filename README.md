@@ -38,7 +38,7 @@
   Kaggle:    Top 7% (ING NLP) | Top 25% (NLP Challenge)
   Status:    Searching for extraordinary things to build...
 
-
+```
 <div align="center">
   <img src="terminal.svg" alt="Meowmet Terminal" width="700">
   
