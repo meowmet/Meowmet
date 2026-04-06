@@ -40,10 +40,6 @@
 
 ```
 <div align="center">
-  <img src="terminal.svg" alt="Meowmet Terminal" width="700">
-  
-  <br><br>
-
   <a href="https://meowmet.github.io/Meowmet/" style="text-decoration: none; color: inherit;">
     <img src="https://cdn.simpleicons.org/googlechrome/888888" width="16" align="center" alt="Portfolio"/> Portfolio
   </a> &nbsp;&nbsp;&nbsp;&nbsp;
