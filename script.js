@@ -262,8 +262,7 @@ Try: su root (password: purrfect-password)`, owner: 'root', group: 'root', mode:
     // System files
     '/etc/profile': { type: 'file', content: `name:       Nuri (Mehmet Nuri Erkan)
 alias:      Meowmet
-location:   Ankara, Türkiye
-university: Atatürk University — Computer Engineering, 3rd Year
+location:   Ankara, Turkey
 focus:      AI/ML  ·  Cybersecurity (Offensive)  ·  Automation
 shell:      /bin/zsh  (obviously)
 editor:     vim  (no regrets)
@@ -274,7 +273,7 @@ VERSION="3.0-atauni"
 ID=meowmet
 PRETTY_NAME="MeowmetOS 3.0 (Cyber-AI Fusion)"
 HOME_URL="https://meowmet.github.io"`, owner: 'root', group: 'root', mode: 0o644 },
-    '/etc/languages': { type: 'file', content: `🇹🇷  Türkçe     ──────────────────────── Native (ana dil)
+    '/etc/languages': { type: 'file', content: `🇹🇷  Turkish    ──────────────────────── Native (native language)
 🇮🇩  Indonesian ──────────────────────── Fluent(B2) 
 🇬🇧  English    ────────────────────░░░░ B2-C1
 🇸🇦  Arabic     ───────░░░░░░░░░░░░░░░░░ A1 `, owner: 'root', group: 'root', mode: 0o644 },
@@ -284,7 +283,7 @@ HOME_URL="https://meowmet.github.io"`, owner: 'root', group: 'root', mode: 0o644
     '/home/nuri/achievements.log': { type: 'file', content: `#01 🥇 1st Place  ── Atasiber "SPEED HACK: EXPLOIT RUN" CTF      [Dec 2025]
 #02 🥉 3rd Place  ── AI Spark Hackathon · Property Estimation     [2025]
 #03 📊 Rank 41/659── Kaggle Customer Churn (Score: 1.23938)       [2025]
-#04 📊 Top 7%     ── ING Hubs Türkiye Datathon (Kaggle)           [2025]
+#04 📊 Top 7%     ── ING Hubs Turkey Datathon (Kaggle)           [2025]
 #05 🔤 Top 25%    ── Deep Past Initiative · Akkadian NLP (ByT5)   [2026]`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     '/home/nuri/social_links.json': { type: 'file', content: `{
   "github":   "github.com/meowmet",
@@ -447,7 +446,7 @@ reward GIFs for motivation.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     '/home/nuri/achievements.log': { type: 'file', content: `#01 🥇 1st Place  ── Atasiber "SPEED HACK: EXPLOIT RUN" CTF      [Dec 2025]
 #02 🥉 3rd Place  ── AI Spark Hackathon · Property Estimation     [2025]
 #03 📊 Rank 41/659── Kaggle Customer Churn (Score: 1.23938)       [2025]
-#04 📊 Top 7%     ── ING Hubs Türkiye Datathon (Kaggle)           [2025]
+#04 📊 Top 7%     ── ING Hubs Turkey Datathon (Kaggle)           [2025]
 #05 🔤 Top 25%    ── Deep Past Initiative · Akkadian NLP (ByT5)   [2026]`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     '/home/nuri/social_links.json': { type: 'file', content: `{
   "github":   "github.com/meowmet",
@@ -583,7 +582,7 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
   const COMMANDS = {
     'whoami': () => `<div class="whoami-output">
   <h1 class="hero-title glitch" data-text="Nuri — Meowmet">Mehmet Nuri ERKAN </h1>
-  <p class="hero-subtitle">Atatürk Üniversitesi · Bilgisayar Mühendisliği · 3. Sınıf | AI &amp; Cybersecurity</p>
+  <p class="hero-subtitle"> Computer Engineering Student · 3rd Year | AI &amp; Cybersecurity</p>
   <p class="hero-tagline">"Bridging the gap between <span class="highlight-blue">Secure Systems</span> and <span class="highlight-green">Intelligent Models</span>"</p>
   <div class="hero-stats">
     <div class="stat"><span class="stat-value">3rd yr</span><span class="stat-label">Atatürk Uni.</span></div>
