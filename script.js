@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initCoreVisuals();
   initMouseEffects();
-  initProjectReadButtons();
 });
 
 
@@ -172,8 +171,6 @@ function initTerminal() {
   }
 
   // Real Linux Filesystem with permission system
-  // Structure: path -> {type: 'file'|'dir', content?, owner, group, mode}
-  // mode: Unix permissions (e.g., 0o644, 0o755, 0o600)
   const FS = {
     // Directories
     '/': { type: 'dir', owner: 'root', group: 'root', mode: 0o755 },
@@ -183,7 +180,6 @@ function initTerminal() {
     '/home/nuri': { type: 'dir', owner: 'nuri', group: 'nuri', mode: 0o755 },
     
     // Root files (highly restricted)
-    '/root/.bashrc': { type: 'file', content: '# Root bashrc config\nalias ll="ls -la"\nalias la="ls -A"', owner: 'root', group: 'root', mode: 0o644 },
     '/root/matrix_tutorial.txt': { type: 'file', content: `Matrix Rain Effect — Learning Guide
 =====================================
 
@@ -243,14 +239,13 @@ SPECIAL FILES (Root Only):
   /root/commands_reference.txt   This file - command documentation
 
 HIDDEN FILES:
-  .bashrc            Shell configuration
   .secret_key        Base64-encoded sensitive data
 
 NAVIGATION TIPS:
-  cd /              Go to root directory
-  cd /root          Enter root's home (requires root privilege)
-  cd /etc           View system config
-  pwd               Always check where you are!
+  cd /               Go to root directory
+  cd /root           Enter root's home (requires root privilege)
+  cd /etc            View system config
+  pwd                Always check where you are!
 
 PERMISSION LOGIC:
   Root user (root): Full access to all files and commands
@@ -440,21 +435,6 @@ Stack:      Web, JavaScript, HTML5, CSS3
 Web-based challenge tracker and calendar for two users.
 Shared progress tracking, daily challenge streaks, and
 reward GIFs for motivation.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
-    '/home/nuri/projects/aqaq.md': { type: 'file', content: `# Aqaq — Challenge Tracker`, owner: 'nuri', group: 'nuri', mode: 0o644 },
-    
-    // User achievements and social files
-    '/home/nuri/achievements.log': { type: 'file', content: `#01 🥇 1st Place  ── Atasiber "SPEED HACK: EXPLOIT RUN" CTF      [Dec 2025]
-#02 🥉 3rd Place  ── AI Spark Hackathon · Property Estimation     [2025]
-#03 📊 Rank 41/659── Kaggle Customer Churn (Score: 1.23938)       [2025]
-#04 📊 Top 7%     ── ING Hubs Turkey Datathon (Kaggle)           [2025]
-#05 🔤 Top 25%    ── Deep Past Initiative · Akkadian NLP (ByT5)   [2026]`, owner: 'nuri', group: 'nuri', mode: 0o644 },
-    '/home/nuri/social_links.json': { type: 'file', content: `{
-  "github":   "github.com/meowmet",
-  "linkedin": "linkedin.com/in/mehmet-nuri-erkan-97b024347",
-  "telegram": "t.me/miyavmet",
-  "thm":      "tryhackme.com/p/Meowmet",
-  "medium":   "medium.com/@meowmetnuwri"
-}`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     
     // Secret root folder with easter egg guides
     '/root/.secret': { type: 'dir', owner: 'root', group: 'root', mode: 0o700 },
@@ -595,15 +575,15 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       let helpText = `<div class="term-output-block">
 <span class="highlight-green">Available commands (most require root):</span>
 <br>
-<span class="term-cmd-list"><span class="highlight-green">cd &lt;path&gt;</span>                 change directory</span>
-<span class="term-cmd-list"><span class="highlight-green">pwd</span>                       print working directory</span>                 
-<span class="term-cmd-list"><span class="highlight-green">ls</span>                        list current directory</span>
-<span class="term-cmd-list"><span class="highlight-green">ls -a</span>                     show hidden files</span>
-<span class="term-cmd-list"><span class="highlight-green">cat &lt;file&gt;</span>                read file (permission-checked)</span>
-<span class="term-cmd-list"><span class="highlight-green">whoami</span>                    display current user</span>
-<span class="term-cmd-list"><span class="highlight-green">su root</span>                   switch to root user</span>
-<span class="term-cmd-list"><span class="highlight-green">exit</span>                      exit root / close session</span>
-<span class="term-cmd-list"><span class="highlight-green">clear</span>                     clear terminal</span>
+<span class="term-cmd-list"><span class="highlight-green">cd &lt;path&gt;</span>                  change directory</span>
+<span class="term-cmd-list"><span class="highlight-green">pwd</span>                        print working directory</span>                 
+<span class="term-cmd-list"><span class="highlight-green">ls</span>                         list current directory</span>
+<span class="term-cmd-list"><span class="highlight-green">ls -a</span>                      show hidden files</span>
+<span class="term-cmd-list"><span class="highlight-green">cat &lt;file&gt;</span>                 read file (permission-checked)</span>
+<span class="term-cmd-list"><span class="highlight-green">whoami</span>                     display current user</span>
+<span class="term-cmd-list"><span class="highlight-green">su root</span>                    switch to root user</span>
+<span class="term-cmd-list"><span class="highlight-green">exit</span>                       exit root / close session</span>
+<span class="term-cmd-list"><span class="highlight-green">clear</span>                      clear terminal</span>
 <span class="term-cmd-list"><span class="highlight-yellow">💡 Pro Tip:</span> Explore the filesystem for hidden secrets...</span>
 </div>`;
       return helpText;
@@ -1358,15 +1338,6 @@ function initProjectModal() {
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-}
-
-
-/* ============================================
-   PROJECT READ BUTTONS — Navigate to GitHub
-   ============================================ */
-function initProjectReadButtons() {
-  // Read buttons are now <a> tags pointing to GitHub
-  // They navigate natively without additional JS handling needed
 }
 
 
