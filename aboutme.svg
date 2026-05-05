@@ -206,7 +206,7 @@
   <rect x="496" y="74" width="288" height="48" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" class="badge-card"/>
   <text x="506" y="92"  class="c-blue  fs-11 fw-700">TryHackMe</text>
   <rect x="628" y="79" width="66" height="18" rx="4" fill="#1f3a5f"/>
-  <text x="661" y="92"  class="c-blue  fs-11 fw-700 ta-mid">Top 6%</text>
+  <text x="661" y="92"  class="c-blue  fs-11 fw-700 ta-mid">Top 4%</text>
   <text x="506" y="112" class="c-muted fs-10">Offensive Security Researcher</text>
 
   <!-- Kaggle Badge -->
