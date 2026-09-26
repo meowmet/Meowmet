@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>meowmet — AI &amp; Cybersecurity Engineer</title>
-  <meta name="description" content="Portfolio of Nuri (Meowmet) — Computer Engineering 3rd year student specializing in AI/ML and Cybersecurity. 1st Place CTF winner, Teknofest Lead AI Developer." />
+  <meta name="description" content="Portfolio of Nuri (Meowmet) — Computer Engineering 4th year student specializing in AI/ML and Cybersecurity. 1st Place CTF winner, Microsoft AI Innovator." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/74294784?v=4&size=64">
@@ -17,7 +17,6 @@
   <div id="mouse-dot" class="mouse-dot" aria-hidden="true"></div>
   <div id="ripple-container" class="ripple-container" aria-hidden="true"></div>
   <div class="noise-overlay" aria-hidden="true"></div>
-
 
   <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
@@ -182,6 +181,61 @@
         <button class="filter-btn" data-filter="web">web_apps</button>
       </div>
       <div class="projects-bento" id="projects-grid">
+
+        <!-- NEW: Enterprise Scale AI -->
+        <div class="project-card glass" data-category="ai"
+          data-title="AgenticVMM"
+          data-status="Microsoft Capstone" data-status-type="live"
+          data-role="Software Engineer"
+          data-desc="An O(1) distributed memory engine for llama.cpp KV-cache pointer cloning. Engineered as the capstone project for the Microsoft AI Innovators Internship Program, targeting enterprise-scale AI memory efficiency."
+          data-tech="C++,llama.cpp,Memory Architecture,Distributed Systems"
+          data-md="agenticvmm">
+          <div class="project-status live"><span class="status-dot"></span> Microsoft Capstone</div>
+          <h3 class="project-name">AgenticVMM</h3>
+          <p class="project-desc">O(1) distributed memory engine for KV-cache pointer cloning.</p>
+          <div class="project-role"><span class="role-badge">Software Engineer</span></div>
+          <div class="project-tech"><span>C++</span><span>llama.cpp</span><span>Memory Arch</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <!-- NEW: AI Research Benchmark -->
+        <div class="project-card glass" data-category="ai"
+          data-title="SymboLang"
+          data-status="Published Benchmark" data-status-type="kaggle"
+          data-role="Researcher & Creator"
+          data-desc="A synthetic language and benchmark suite designed to measure syntax drift and executive function in reasoning LLMs. Adopted for testing AI logic degradation on Kaggle."
+          data-tech="Python,NLP,LLM Benchmarking,Kaggle"
+          data-md="symbolang">
+          <div class="project-status kaggle"><span class="status-dot"></span> Published Benchmark</div>
+          <h3 class="project-name">SymboLang</h3>
+          <p class="project-desc">Synthetic language benchmark for measuring LLM syntax drift.</p>
+          <div class="project-tech"><span>Python</span><span>NLP</span><span>Benchmarking</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
+
+        <!-- NEW: Real-world Zero-Day -->
+        <div class="project-card glass" data-category="security"
+          data-title="PixVerse BAC Bypass"
+          data-status="Vulnerability Discovered" data-status-type="live"
+          data-role="Security Researcher"
+          data-desc="Discovered and documented a critical Broken Access Control (BAC) vulnerability on the PixVerse platform, allowing direct video link bypass mechanics in production."
+          data-tech="Web Security,Penetration Testing,Vulnerability Research"
+          data-md="pixverse_bac">
+          <div class="project-status live"><span class="status-dot"></span> Vulnerability Discovered</div>
+          <h3 class="project-name">PixVerse BAC Bypass</h3>
+          <p class="project-desc">Real-world Broken Access Control discovery on a production platform.</p>
+          <div class="project-tech"><span>Web Security</span><span>Pentesting</span><span>Zero-Day</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/meowmet" target="_blank" rel="noopener noreferrer" class="project-read-btn">READ DETAILED</a>
+          </div>
+          <div class="project-overlay"><span class="project-view">View Details →</span></div>
+        </div>
 
         <div class="project-card glass" data-category="ai"
           data-title="Rainsense"
@@ -460,7 +514,19 @@
           <span class="terminal-title">achievements@meowmet:~$ cat ranked.log</span>
         </div>
         <div class="scoreboard-body" id="scoreboard-body">
+
           <div class="score-row score-gold" data-index="0">
+            <div class="score-rank">#00</div><div class="score-bar-accent gold-bar"></div>
+            <div class="score-main">
+              <div class="score-top"><span class="score-badge badge-ml">Engineering</span><span class="score-place">Capstone Project</span><span class="score-org">Microsoft</span></div>
+              <h3 class="score-title">AgenticVMM — Microsoft AI Innovators</h3>
+              <div class="score-meta"><span class="score-cat">Distributed Memory Engine</span><span class="score-year">Sep 2026</span></div>
+            </div>
+            <div class="score-stat"><span class="score-num">O(1)</span><span class="score-num-label">scaling</span></div>
+            <div class="score-scanline"></div>
+          </div>
+
+          <div class="score-row score-gold" data-index="1">
             <div class="score-rank">#01</div><div class="score-bar-accent gold-bar"></div>
             <div class="score-main">
               <div class="score-top"><span class="score-badge badge-ctf">CTF</span><span class="score-place">1st Place</span><span class="score-org">Atasiber</span></div>
@@ -470,7 +536,7 @@
             <div class="score-stat"><span class="score-num">1st</span><span class="score-num-label">place</span></div>
             <div class="score-scanline"></div>
           </div>
-          <div class="score-row score-silver" data-index="1">
+          <div class="score-row score-silver" data-index="2">
             <div class="score-rank">#02</div><div class="score-bar-accent silver-bar"></div>
             <div class="score-main">
               <div class="score-top"><span class="score-badge badge-ml">ML</span><span class="score-place">3rd Place</span><span class="score-org">AI Spark</span></div>
@@ -480,7 +546,7 @@
             <div class="score-stat"><span class="score-num">3rd</span><span class="score-num-label">place</span></div>
             <div class="score-scanline"></div>
           </div>
-          <div class="score-row score-cyan" data-index="2">
+          <div class="score-row score-cyan" data-index="3">
             <div class="score-rank">#03</div><div class="score-bar-accent cyan-bar"></div>
             <div class="score-main">
               <div class="score-top"><span class="score-badge badge-kaggle">Kaggle</span><span class="score-place">Rank 41 / 659</span><span class="score-org">Kaggle</span></div>
@@ -490,7 +556,7 @@
             <div class="score-stat"><span class="score-num">6%</span><span class="score-num-label">top</span></div>
             <div class="score-scanline"></div>
           </div>
-          <div class="score-row score-cyan" data-index="3">
+          <div class="score-row score-cyan" data-index="4">
             <div class="score-rank">#04</div><div class="score-bar-accent cyan-bar"></div>
             <div class="score-main">
               <div class="score-top"><span class="score-badge badge-kaggle">Datathon</span><span class="score-place">Top 7%</span><span class="score-org">ING Hubs Turkey</span></div>
@@ -500,7 +566,7 @@
             <div class="score-stat"><span class="score-num">7%</span><span class="score-num-label">top</span></div>
             <div class="score-scanline"></div>
           </div>
-          <div class="score-row score-purple" data-index="4">
+          <div class="score-row score-purple" data-index="5">
             <div class="score-rank">#05</div><div class="score-bar-accent purple-bar"></div>
             <div class="score-main">
               <div class="score-top"><span class="score-badge badge-nlp">NLP</span><span class="score-place">Top 25%</span><span class="score-org">Kaggle</span></div>
@@ -528,6 +594,26 @@
         <p class="section-subtitle">cat ~/certs/*.pem</p>
       </div>
       <div class="certs-accordion" id="certs-accordion">
+
+    <div class="cert-group">
+      <button class="cert-group-header" aria-expanded="false">
+        <span class="cert-group-icon">▶</span>
+        <span class="cert-group-name">Industry Experience & Assessments</span>
+        <span class="cert-group-count">2 achievements</span>
+      </button>
+      <div class="cert-group-body">
+        <div class="cert-entry">
+          <div class="cert-icon">🏢</div>
+          <div class="cert-info"><span class="cert-name">AI Innovators Internship Program</span><span class="cert-issuer">Microsoft · Sep 2026</span></div>
+          <span class="cert-status verified">✓ COMPLETED</span>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-info"><span class="cert-name">Cyber Security Internship Assessment (89.52%)</span><span class="cert-issuer">Privia Security · May 2026</span></div>
+          <span class="cert-status verified">✓ PASSED</span>
+        </div>
+      </div>
+    </div>
 
     <div class="cert-group">
       <button class="cert-group-header" aria-expanded="false">
