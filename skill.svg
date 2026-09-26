@@ -50,20 +50,20 @@
 
 <text x="24" y="114" class="c-muted fs-10">Transformers</text>
 <rect x="110" y="105" width="148" height="9" rx="2" fill="#21262d"/>
-<rect x="110" y="105" width="112" height="9" rx="2" fill="#1a4a8a" class="pb"/>
-<text x="266" y="114" class="c-blue fs-10">[Proficient]</text>
+<rect x="110" y="105" width="135" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="114" class="c-blue fs-10">[Advanced]</text>
 
 <text x="24" y="131" class="c-muted fs-10">NLP         </text>
 <rect x="110" y="122" width="148" height="9" rx="2" fill="#21262d"/>
-<rect x="110" y="122" width="112" height="9" rx="2" fill="#1a4a8a" class="pb"/>
-<text x="266" y="131" class="c-blue fs-10">[Proficient]</text>
+<rect x="110" y="122" width="135" height="9" rx="2" fill="#1a4a8a" class="pb"/>
+<text x="266" y="131" class="c-blue fs-10">[Advanced]</text>
 
 <text x="24" y="148" class="c-muted fs-10">Scikit-learn</text>
 <rect x="110" y="139" width="148" height="9" rx="2" fill="#21262d"/>
 <rect x="110" y="139" width="135" height="9" rx="2" fill="#1a4a8a" class="pb"/>
 <text x="266" y="148" class="c-blue fs-10">[Advanced]</text>
 
-<text x="20" y="175" class="c-muted fs-10">└─ Mission: <tspan class="c-yellow">Rainsense AI</tspan> <tspan fill="#484f58">(Pending)</tspan></text>
+<text x="20" y="175" class="c-muted fs-10">└─ Mission: <tspan class="c-yellow">AgenticVMM</tspan> <tspan fill="#484f58">(Microsoft)</tspan></text>
 <text x="16" y="195" class="c-blue fs-11">└────────────────────────────────────┘</text>
 
 <text x="404" y="80" class="c-red fs-11 fw-7">┌─ Core 1: Offensive Sec ─────────────┐</text>
@@ -77,17 +77,17 @@
 <rect x="502" y="105" width="120" height="9" rx="2" fill="#5a1a1a" class="pr"/>
 <text x="626" y="114" class="c-red fs-10">[Hardened]</text>
 
-<text x="412" y="131" class="c-muted fs-10">AES-256/C++ </text>
+<text x="412" y="131" class="c-muted fs-10">Vuln Research</text>
 <rect x="502" y="122" width="120" height="9" rx="2" fill="#21262d"/>
-<rect x="502" y="122" width="94" height="9" rx="2" fill="#5a1a1a" class="pr"/>
-<text x="626" y="131" class="c-red fs-10">[Proficient]</text>
+<rect x="502" y="122" width="110" height="9" rx="2" fill="#5a1a1a" class="pr"/>
+<text x="626" y="131" class="c-red fs-10">[Zero-Day]</text>
 
 <text x="412" y="148" class="c-muted fs-10">Metasploit  </text>
 <rect x="502" y="139" width="120" height="9" rx="2" fill="#21262d"/>
 <rect x="502" y="139" width="110" height="9" rx="2" fill="#5a1a1a" class="pr"/>
 <text x="626" y="148" class="c-red fs-10">[Advanced]</text>
 
-<text x="412" y="175" class="c-muted fs-10">└─ Status: <tspan class="c-green">THM Top 6%</tspan> <tspan class="c-muted">Researcher</tspan></text>
+<text x="412" y="175" class="c-muted fs-10">└─ Status: <tspan class="c-green">THM Top 1%</tspan> <tspan class="c-muted">Researcher</tspan></text>
 <text x="404" y="195" class="c-red fs-11">└────────────────────────────────────┘</text>
 
 <line x1="10" y1="212" x2="790" y2="212" stroke="#30363d" stroke-width="1"/>
@@ -134,7 +134,7 @@
 <rect x="0" y="428" width="800" height="22" fill="#161b22"/>
 <rect x="0" y="428" width="800" height="2"  fill="#0d1117"/>
 <text x="16"  y="443" class="c-status fs-10">● ONLINE</text>
-<text x="120" y="443" class="c-muted  fs-10">meowmet · Computer Engineering · TR</text>
+<text x="120" y="443" class="c-muted  fs-10">meowmet · Computer Engineering (4th Yr) · TR</text>
 <text x="740" y="443" class="c-muted  fs-10">UTF-8</text>
 
 </svg>
