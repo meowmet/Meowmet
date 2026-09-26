@@ -145,7 +145,7 @@
   <!-- Name -->
   <text x="20" y="90"  class="c-blue  fs-13 fw-700 type-l2">▶  Mehmet Nuri Erkan</text>
   <!-- University -->
-  <text x="20" y="108" class="c-muted fs-11 type-l2b">   Computer Engineering </text>
+  <text x="20" y="108" class="c-muted fs-11 type-l2b">   Computer Engineering · 4th Year</text>
 
   <!-- Prompt line 2 -->
   <text x="20" y="148" class="c-green fs-12 fw-700 type-l3">
@@ -156,7 +156,7 @@
   <!-- Language rows -->
   <text x="20" y="168" class="fs-11 type-l4">
     <tspan class="c-yellow">01</tspan>
-    <tspan class="c-muted">  Turkish       </tspan>
+    <tspan class="c-muted">  Turkish        </tspan>
     <tspan class="c-green">████████████  </tspan>
     <tspan class="c-light">Native</tspan>
   </text>
@@ -209,22 +209,22 @@
   <text x="661" y="92"  class="c-blue  fs-11 fw-700 ta-mid">Top 1%</text>
   <text x="506" y="112" class="c-muted fs-10">Offensive Security Researcher</text>
 
-  <!-- Kaggle Badge -->
+  <!-- Microsoft Badge -->
   <rect x="496" y="130" width="288" height="60" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" class="badge-card"/>
-  <text x="506" y="148" class="c-blue  fs-11 fw-700">Kaggle</text>
-  <text x="506" y="165" class="c-muted fs-10">ING — NLP Competition</text>
+  <text x="506" y="148" class="c-blue  fs-11 fw-700">Microsoft</text>
+  <text x="506" y="165" class="c-muted fs-10">AI Innovators Internship Program</text>
   <rect x="628" y="135" width="66" height="18" rx="4" fill="#1a3a2a"/>
-  <text x="661" y="148" class="c-green fs-11 fw-700 ta-mid">Top 7%</text>
-  <text x="506" y="180" class="c-muted fs-10">NLP Challenge</text>
+  <text x="661" y="148" class="c-green fs-11 fw-700 ta-mid">Capstone</text>
+  <text x="506" y="180" class="c-muted fs-10">AgenticVMM Distributed Engine</text>
   <rect x="628" y="168" width="66" height="18" rx="4" fill="#1a3a2a"/>
-  <text x="661" y="181" class="c-green fs-11 fw-700 ta-mid">Top 25%</text>
+  <text x="661" y="181" class="c-green fs-11 fw-700 ta-mid">O(1) Mem</text>
 
   <!-- STATUS header -->
   <text x="496" y="210" class="c-muted fs-11 neon-glow-green">├─ STATUS ──────────────────────────┤</text>
 
-  <text x="506" y="228" class="c-green  fs-10">● Active    Computer Engineering Student @ TR</text>
-  <text x="506" y="244" class="c-yellow fs-10">◉ Building    Rainsense AI (AgriTech)</text>
-  <text x="506" y="260" class="c-blue   fs-10">◈ Research Medical Informatics (Tanımatik) </text>
+  <text x="506" y="228" class="c-green  fs-10">● Active    Computer Engineering (4th Yr) @ TR</text>
+  <text x="506" y="244" class="c-yellow fs-10">◉ Architect AgenticVMM (Microsoft Capstone)</text>
+  <text x="506" y="260" class="c-blue   fs-10">◈ Research  Zero-Day Vulns &amp; AI Benchmarks</text>
 
   <text x="496" y="278" class="c-muted fs-11 neon-glow">└───────────────────────────────────┘</text>
 
@@ -233,7 +233,7 @@
   <rect x="0" y="308" width="800" height="2"  fill="#0d1117"/>
   
   <text x="16"  y="323" class="c-status fs-10">● ONLINE</text>
-  <text x="120" y="323" class="c-muted  fs-10">meowmet · Computer Engineering · TR</text>
+  <text x="120" y="323" class="c-muted  fs-10">meowmet · Computer Engineering (4th Yr) · TR</text>
   <text x="700" y="323" class="c-muted  fs-10">UTF-8</text>
 
 </svg>
