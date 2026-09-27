@@ -1,8 +1,3 @@
-/* ============================================
-   meowmet PORTFOLIO
-   Cyber-AI Fusion — CTF Terminal Edition
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initTerminal();
@@ -16,10 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMouseEffects();
 });
 
-
-/* ============================================
-   MOUSE EFFECTS
-   ============================================ */
 function initMouseEffects() {
   const glow = document.getElementById('mouse-glow');
   const dot  = document.getElementById('mouse-dot');
@@ -54,10 +45,6 @@ function initMouseEffects() {
   });
 }
 
-
-/* ============================================
-   PARTICLES
-   ============================================ */
 function initParticles() {
   const canvas = document.getElementById('particles-canvas');
   if (!canvas) return;
@@ -129,10 +116,6 @@ function initParticles() {
   window.addEventListener('resize', init);
 }
 
-
-/* ============================================
-   INTERACTIVE TERMINAL — CTF Edition v3.0
-   ============================================ */
 function initTerminal() {
   const history  = document.getElementById('terminal-history');
   const inputEl  = document.getElementById('terminal-input');
@@ -145,9 +128,8 @@ function initTerminal() {
   let cmdHistory = [];
   let historyIdx = -1;
   let isRoot = false;
-  let currentDir = '/home/nuri'; // guests start in their home directory
+  let currentDir = '/home/nuri'; 
 
-  // Prompts
   function currentPrompt() {
     const homeDir = isRoot ? '/root' : '/home/nuri';
     const displayDir = currentDir === homeDir ? '~' : currentDir;
@@ -170,16 +152,13 @@ function initTerminal() {
     }
   }
 
-  // Real Linux Filesystem with permission system
   const FS = {
-    // Directories
     '/': { type: 'dir', owner: 'root', group: 'root', mode: 0o755 },
     '/root': { type: 'dir', owner: 'root', group: 'root', mode: 0o700 },
     '/etc': { type: 'dir', owner: 'root', group: 'root', mode: 0o755 },
     '/home': { type: 'dir', owner: 'root', group: 'root', mode: 0o755 },
     '/home/nuri': { type: 'dir', owner: 'nuri', group: 'nuri', mode: 0o755 },
     
-    // Root files (highly restricted)
     '/root/matrix_tutorial.txt': { type: 'file', content: `Matrix Rain Effect — Learning Guide
 =====================================
 
@@ -254,7 +233,6 @@ PERMISSION LOGIC:
 Try: su root (password: purrfect-password)`, owner: 'root', group: 'root', mode: 0o644 },
     '/root/.secret_key': { type: 'file', content: 'cHVycmZlY3QtcGFzc3dvcmQ=', owner: 'root', group: 'root', mode: 0o600 },
     
-    // System files
     '/etc/profile': { type: 'file', content: `name:       Nuri (Mehmet Nuri Erkan)
 alias:      Meowmet
 location:   Ankara, Turkey
@@ -273,13 +251,14 @@ HOME_URL="https://meowmet.github.io"`, owner: 'root', group: 'root', mode: 0o644
 🇬🇧  English    ────────────────────░░░░ B2-C1
 🇸🇦  Arabic     ───────░░░░░░░░░░░░░░░░░ A1 `, owner: 'root', group: 'root', mode: 0o644 },
     
-    // Home files
     '/home/nuri/.secret_key': { type: 'file', content: 'cHVycmZlY3QtcGFzc3dvcmQ=', owner: 'nuri', group: 'nuri', mode: 0o600 },
-    '/home/nuri/achievements.log': { type: 'file', content: `#01 🥇 1st Place  ── Atasiber "SPEED HACK: EXPLOIT RUN" CTF      [Dec 2025]
-#02 🥉 3rd Place  ── AI Spark Hackathon · Property Estimation     [2025]
-#03 📊 Rank 41/659── Kaggle Customer Churn (Score: 1.23938)       [2025]
-#04 📊 Top 7%     ── ING Hubs Turkey Datathon (Kaggle)           [2025]
-#05 🔤 Top 25%    ── Deep Past Initiative · Akkadian NLP (ByT5)   [2026]`, owner: 'nuri', group: 'nuri', mode: 0o644 },
+    '/home/nuri/achievements.log': { type: 'file', content: `#00 🏢 Capstone   ── Microsoft AI Innovators (AgenticVMM)            [Sep 2026]
+#01 🛡️ Zero-Day   ── PixVerse Broken Access Control Vulnerability    [May 2026]
+#02 🥇 1st Place  ── Atasiber "SPEED HACK: EXPLOIT RUN" CTF          [Dec 2025]
+#03 🥉 3rd Place  ── AI Spark Hackathon · Property Estimation        [2025]
+#04 📊 Rank 41    ── Kaggle Customer Churn (Score: 1.23938)          [2025]
+#05 📊 Top 7%     ── ING Hubs Turkey Datathon (Kaggle)               [2025]
+#06 🔤 Top 25%    ── Deep Past Initiative · Akkadian NLP (ByT5)      [2026]`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     '/home/nuri/social_links.json': { type: 'file', content: `{
   "github":   "github.com/meowmet",
   "linkedin": "linkedin.com/in/mehmet-nuri-erkan-97b024347",
@@ -310,8 +289,32 @@ general_ops:
   - Flask / React / JavaScript
   - Selenium / Firebase / Docker`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     
-    // Projects directory
     '/home/nuri/projects': { type: 'dir', owner: 'nuri', group: 'nuri', mode: 0o755 },
+    '/home/nuri/projects/agenticvmm.md': { type: 'file', content: `# AgenticVMM — Memory Engine
+Status:     Microsoft Capstone
+Role:       Software Engineer
+Stack:      C++, llama.cpp, Distributed Systems
+
+An O(1) distributed memory engine for llama.cpp KV-cache pointer cloning.
+Engineered as the capstone project for the Microsoft AI Innovators
+Internship Program, targeting enterprise-scale AI memory efficiency.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
+
+    '/home/nuri/projects/symbolang.md': { type: 'file', content: `# SymboLang — AI Benchmark
+Status:     Published Benchmark
+Role:       Researcher & Creator
+Stack:      Python, NLP, LLM Benchmarking, Kaggle
+
+A synthetic language and benchmark suite designed to measure syntax
+drift and executive function in reasoning LLMs.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
+
+    '/home/nuri/projects/pixverse_bac.md': { type: 'file', content: `# PixVerse BAC Bypass
+Status:     Vulnerability Discovered
+Role:       Security Researcher
+Stack:      Web Security, Penetration Testing
+
+Discovered and documented a critical Broken Access Control (BAC)
+vulnerability on the PixVerse platform, allowing direct video link
+bypass mechanics in production.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     '/home/nuri/projects/rainsense.md': { type: 'file', content: `# Rainsense — Smart AgriTech AI
 Status:     ACTIVE — Teknofest 2026
 Role:       Lead AI Developer
@@ -436,7 +439,6 @@ Web-based challenge tracker and calendar for two users.
 Shared progress tracking, daily challenge streaks, and
 reward GIFs for motivation.`, owner: 'nuri', group: 'nuri', mode: 0o644 },
     
-    // Secret root folder with easter egg guides
     '/root/.secret': { type: 'dir', owner: 'root', group: 'root', mode: 0o700 },
     '/root/.secret/treasure.txt': { type: 'file', content: `🏴‍☠️ ONE PIECE EASTER EGG — TREASURE MAP
 ==========================================
@@ -501,34 +503,28 @@ Only root users can pierce the veil and see the Matrix. Are you ready
 to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode: 0o600 },
   };
 
-  // Helper function to check file/directory permissions
   function canRead(path, user) {
     const file = FS[path];
     if (!file) return false;
-    if (user === 'root') return true; // root can read everything
+    if (user === 'root') return true; 
     
-    // For directories: check if world-readable (mode 0o755)
     if (file.type === 'dir') {
-      return (file.mode & 0o005) !== 0; // others can execute (enter) this directory
+      return (file.mode & 0o005) !== 0; 
     }
     
-    // For files: check ownership or world-readable
-    if (file.owner === user) return true; // own files
-    if (file.owner === 'nuri') return true; // nuri's accessible files are readable by guests
-    if (file.mode & 0o004) return true; // world readable
-    return false; // no permission
+    if (file.owner === user) return true; 
+    if (file.owner === 'nuri') return true; 
+    if (file.mode & 0o004) return true; 
+    return false; 
   }
 
-  // Helper function to check if user can enter a directory
   function canEnterDir(path, user) {
     const file = FS[path];
     if (!file || file.type !== 'dir') return false;
-    if (user === 'root') return true; // root can enter any directory
-    // Guests can enter world-executable directories (0o755)
+    if (user === 'root') return true; 
     return (file.mode & 0o005) !== 0;
   }
 
-  // Helper function to check if path exists and list contents
   function listDirectory(dirPath, user) {
     const contents = Object.keys(FS).filter(path => {
       const parent = path.substring(0, path.lastIndexOf('/')) || '/';
@@ -543,7 +539,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       const file = FS[path];
       const name = path.substring(path.lastIndexOf('/') + 1);
       
-      // Skip files user can't read (especially hidden files)
       if (!canRead(path, user)) {
         return null;
       }
@@ -558,14 +553,13 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     return `<div class="term-output-block">${lines.join('  ')}</div>`;
   }
   
-
   const COMMANDS = {
     'whoami': () => `<div class="whoami-output">
   <h1 class="hero-title glitch" data-text="Nuri — Meowmet">Mehmet Nuri ERKAN </h1>
-  <p class="hero-subtitle"> Computer Engineering Student · 3rd Year | AI &amp; Cybersecurity</p>
+  <p class="hero-subtitle"> Computer Engineering Student · 4th Year | AI &amp; Cybersecurity</p>
   <p class="hero-tagline">"Bridging the gap between <span class="highlight-blue">Secure Systems</span> and <span class="highlight-green">Intelligent Models</span>"</p>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-value">3rd yr</span><span class="stat-label">Atatürk Uni.</span></div>
+    <div class="stat"><span class="stat-value">4th yr</span><span class="stat-label">Atatürk Uni.</span></div>
     <div class="stat"><span class="stat-value">1st</span><span class="stat-label">CTF Champion</span></div>
     <div class="stat"><span class="stat-value">15+</span><span class="stat-label">Projects</span></div>
   </div>
@@ -618,7 +612,7 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     'exit': () => {
       if (isRoot) {
         isRoot = false;
-        currentDir = '/home/nuri'; // return to guest home
+        currentDir = '/home/nuri'; 
         updatePromptUI();
         return '<span class="highlight-green">Returning to guest shell...</span>';
       }
@@ -629,29 +623,23 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     'matrix':    () => '__MATRIX__',
   };
 
-  // Resolve command with permission checking and directory navigation
   function resolveCommand(cmd) {
     if (COMMANDS[cmd]) return COMMANDS[cmd];
 
-    // Handle cd command with proper type checking
     const cdMatch = cmd.match(/^cd\s+(.+)$/);
     if (cdMatch) {
       let target = cdMatch[1].trim();
       
-      // Handle tilde expansion
       const homeDir = isRoot ? '/root' : '/home/nuri';
       if (target === '~') target = homeDir;
       else if (target.startsWith('~/')) target = homeDir + target.substring(1);
       else if (!target.startsWith('/')) {
-        // Relative paths
         if (target.startsWith('.')) target = currentDir + '/' + target;
         else {
-          // Don't double-slash if currentDir is '/'
           target = currentDir === '/' ? '/' + target : currentDir + '/' + target;
         }
       }
       
-      // Clean up double slashes
       target = target.split('/').filter(Boolean).join('/');
       if (!target.startsWith('/')) target = '/' + target;
       
@@ -659,7 +647,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       const file = FS[target];
       
       if (file && file.type === 'dir') {
-        // Check permission to enter directory
         if (!canEnterDir(target, user)) {
           return () => `<span class="term-error">⚠️ You don't have permission to access ${escapeHtml(target)}</span>`;
         }
@@ -667,7 +654,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         return () => '';
       }
       
-      // Check if it's a file
       if (file && file.type === 'file') {
         return () => `<span class="term-error">cd: ${escapeHtml(target)}: Not a directory</span>`;
       }
@@ -675,26 +661,22 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       return () => `<span class="term-error">cd: ${escapeHtml(target)}: No such file or directory</span>`;
     }
 
-    // Handle cat command with permission checking and relative path expansion
     const catMatch = cmd.match(/^cat\s+(.+)$/);
     if (catMatch) {
       let path = catMatch[1].trim();
       
-      // Expand relative paths
       if (!path.startsWith('/')) {
         const homeDir = isRoot ? '/root' : '/home/nuri';
         if (path === '~') path = homeDir;
         else if (path.startsWith('~/')) path = homeDir + path.substring(1);
-        else if (path.startsWith('.')) path = currentDir + '/' + path; // relative like ./file or .file
-        else path = currentDir + '/' + path; // default to current directory
+        else if (path.startsWith('.')) path = currentDir + '/' + path; 
+        else path = currentDir + '/' + path; 
       }
       
-      // Clean up double slashes
       path = path.split('/').filter(Boolean).join('/');
       if (!path.startsWith('/')) path = '/' + path;
       
       if (FS[path]) {
-        // Prevent cat from reading directories
         if (FS[path].type === 'dir') {
           return () => `<span class="term-error">cat: ${escapeHtml(path)}: Is a directory</span>`;
         }
@@ -706,11 +688,9 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       return () => `<span class="term-error">cat: ${escapeHtml(path)}: No such file or directory</span>`;
     }
 
-    // Handle ls with path
     if (cmd.startsWith('ls ')) {
       let target = cmd.slice(3).trim();
       
-      // Expand relative paths for ls
       if (!target.startsWith('/')) {
         const homeDir = isRoot ? '/root' : '/home/nuri';
         if (target === '~') target = homeDir;
@@ -719,7 +699,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         else target = currentDir === '/' ? '/' + target : currentDir + '/' + target;
       }
       
-      // Clean up double slashes
       target = target.split('/').filter(Boolean).join('/');
       if (!target.startsWith('/')) target = '/' + target;
       
@@ -733,16 +712,13 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       return () => `<span class="term-error">ls: cannot access '${escapeHtml(target)}': No such file or directory</span>`;
     }
 
-    // Sudo interception
     if (cmd.startsWith('sudo')) {
       return () => `<span class="term-warning">⚠️ I would not try that if I were you</span>`;
     }
 
-    // Handle su command generically
     const suMatch = cmd.match(/^su\s+(.*)$/);
     if (suMatch) {
       const target = suMatch[1].trim();
-      // Only root user can be switched to
       if (target === 'root' || target === '') {
         return () => '__SU_ROOT__';
       } else {
@@ -750,13 +726,11 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       }
     }
 
-    // Check for standalone su
     if (cmd === 'su') {
       return () => '__SU_ROOT__';
     }
   }
 
-  // Boot sequence
   const bootLines = [
     { delay: 0,    text: '<span class="term-comment">[    0.000000] booting meowmet-portfolio v3.0...</span>' },
     { delay: 300,  text: '<span class="highlight-green">[  OK  ]</span> Started AI inference engine' },
@@ -775,7 +749,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     }, delay);
   });
 
-  // Input handler
   inputEl.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       const raw = inputEl.value.trim();
@@ -785,11 +758,9 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       cmdHistory.unshift(cmd);
       historyIdx = -1;
 
-      // Echo the command
       const promptClass = isRoot ? 'prompt root-mode' : 'prompt';
       appendLine(`<span class="${promptClass}">${currentPrompt()}&nbsp;</span><span class="command">${escapeHtml(raw)}</span>`);
 
-      // Execute
       if (cmd === 'clear') {
         history.innerHTML = '';
       } else if (cmd === 'su' || cmd.startsWith('su ')) {
@@ -830,26 +801,23 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       scrollTerminal();
     }
 
-    // Ctrl+D to exit root
     if (e.key === 'd' && e.ctrlKey) {
       e.preventDefault();
       if (isRoot) {
         isRoot = false;
-        currentDir = '/home/nuri'; // return to guest home
+        currentDir = '/home/nuri'; 
         updatePromptUI();
         appendLine(`<span class="highlight-green">Returning to guest shell...</span>`);
         scrollTerminal();
       }
     }
 
-    // Ctrl+L to clear terminal
     if (e.key === 'l' && e.ctrlKey) {
       e.preventDefault();
       history.innerHTML = '';
       inputEl.focus();
     }
 
-    // History navigation
     if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (historyIdx < cmdHistory.length - 1) historyIdx++;
@@ -862,45 +830,37 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       inputEl.value = cmdHistory[historyIdx] || '';
     }
 
-    // Tab autocomplete — bash-like behavior
     if (e.key === 'Tab') {
       e.preventDefault();
       const input = inputEl.value;
       
-      // Determine what we're trying to complete
       const isCdCommand = input.match(/^cd\s+(.*)$/i);
       const isCatCommand = input.match(/^cat\s+(.*)$/i);
       const isLsCommand = input.match(/^ls\s+(.*)$/i);
       
       if (isCdCommand) {
-        // Completing directory path for cd
         let pathPart = isCdCommand[1] || '';
         const prefix = input.substring(0, input.length - pathPart.length);
-        const matches = getPathMatches(pathPart, true); // true = dirs only
+        const matches = getPathMatches(pathPart, true); 
         completeWithMatches(prefix, pathPart, matches);
       } else if (isCatCommand) {
-        // Completing file path for cat
         let pathPart = isCatCommand[1] || '';
         const prefix = input.substring(0, input.length - pathPart.length);
-        const matches = getPathMatches(pathPart, false); // false = all files
+        const matches = getPathMatches(pathPart, false); 
         completeWithMatches(prefix, pathPart, matches);
       } else if (isLsCommand) {
-        // Completing path for ls
         let pathPart = isLsCommand[1] || '';
         const prefix = input.substring(0, input.length - pathPart.length);
-        const matches = getPathMatches(pathPart, true); // dirs for ls
+        const matches = getPathMatches(pathPart, true); 
         completeWithMatches(prefix, pathPart, matches);
       } else {
-        // Completing command names
         const partial = input.toLowerCase();
         const allCmds = Object.keys(COMMANDS);
         const matches = allCmds.filter(cmd => cmd.startsWith(partial));
         completeWithMatches('', partial, matches);
       }
       
-      // Helper: get matching paths
       function getPathMatches(partial, dirsOnly) {
-        // Expand tilde if needed
         let expandedPartial = partial;
         const homeDir = isRoot ? '/root' : '/home/nuri';
         if (partial === '~') expandedPartial = homeDir;
@@ -917,7 +877,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
           if (dirsOnly && FS[p].type !== 'dir') return false;
           return true;
         }).map(p => {
-          // Convert back to user-friendly format
           if (partial.startsWith('~')) {
             return '~' + p.substring(homeDir.length);
           } else if (partial.startsWith('.')) {
@@ -930,22 +889,18 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         return matches;
       }
       
-      // Helper: complete input with matches
       function completeWithMatches(prefix, partial, matches) {
         if (matches.length === 0) return;
         
         if (matches.length === 1) {
-          // Single match: complete it with space for dirs
           const match = matches[0];
           const isDir = partial === '' || partial.endsWith('/') || 
-                       (match.includes('/') && !match.endsWith('/'));
+                        (match.includes('/') && !match.endsWith('/'));
           inputEl.value = prefix + match + (isDir ? '/' : '');
         } else {
-          // Multiple matches: show them and complete to common prefix
           const commonPrefix = getCommonPrefix(matches);
           inputEl.value = prefix + commonPrefix;
           
-          // Show suggestions in terminal
           appendLine(`<span class="term-comment">Available options:</span>`);
           const suggestions = matches.map(m => {
             const obj = resolvePath(m);
@@ -957,7 +912,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         }
       }
       
-      // Helper: get common prefix for array of strings
       function getCommonPrefix(arr) {
         if (arr.length === 0) return '';
         let prefix = arr[0];
@@ -969,7 +923,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         return prefix;
       }
       
-      // Helper: resolve path to FS object
       function resolvePath(path) {
         let resolved = path;
         const homeDir = isRoot ? '/root' : '/home/nuri';
@@ -982,7 +935,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     }
   });
 
-  // Click terminal body to focus input
   termBody.addEventListener('click', () => inputEl.focus());
 
   function appendLine(html) {
@@ -1000,7 +952,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  // ---- SU ROOT overlay ----
   function showSuOverlay() {
     const overlay = document.getElementById('su-overlay');
     const pwInput = document.getElementById('su-password-input');
@@ -1018,9 +969,8 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
       if (e.key === 'Enter') {
         const pw = pwInput.value;
         if (pw === 'purrfect-password') {
-          // SUCCESS — escalate to root
           isRoot = true;
-          currentDir = '/root'; // change to root's home directory
+          currentDir = '/root'; 
           updatePromptUI();
           overlay.classList.remove('open');
           overlay.setAttribute('aria-hidden', 'true');
@@ -1028,7 +978,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
           scrollTerminal();
           pwInput.removeEventListener('keydown', handleSuInput);
         } else {
-          // FAIL
           hint.textContent = '⚠️ I would not try that if I were you';
           pwInput.value = '';
           pwInput.style.animation = 'none';
@@ -1050,22 +999,18 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     pwInput.addEventListener('keydown', handleSuInput);
   }
 
-  // ---- ONE PIECE Easter Egg ----
   function triggerOnePiece() {
     appendLine('<span class="highlight-yellow">🏴‍☠️ THE ONE PIECE... IS REAL!</span>');
     scrollTerminal();
 
-    // Audio ve Resim Ayarları
     const audioUrl = 'https://www.myinstants.com/media/sounds/the-one-piece-is-real.mp3';
     const imageUrl = 'https://i.pinimg.com/originals/69/26/f8/6926f8f7d1bfa846c6c031fc46d18bf7.jpg';
 
-    // Resim Oluşturma ve 270 Derece Döndürme
     const img = document.createElement('img');
     img.src = imageUrl;
     img.style.position = 'fixed';
     img.style.top = '50%';
     img.style.left = '50%';
-    // Başlangıçta 270 derece dönmüş ve görünmez (scale 0)
     img.style.transform = 'translate(-50%, -50%) rotate(270deg) scale(0)';
     img.style.zIndex = '999999';
     img.style.borderRadius = '20px';
@@ -1074,20 +1019,16 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     img.style.maxWidth = '80vh';
     img.style.maxHeight = '80vw';
 
-    // Arka Plan Karartma
     const overlay = document.createElement('div');
     overlay.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); z-index:999998; opacity:0; transition:opacity 0.5s;';
 
     document.body.appendChild(overlay);
     document.body.appendChild(img);
 
-    // Ses ve Animasyon Tetikleme
     const audio = new Audio(audioUrl);
     
     audio.play().then(() => {
-        // Ses başlarsa efektleri göster
         overlay.style.opacity = '1';
-        // 270 derece sabit kalarak ekrana fırlar
         img.style.transform = 'translate(-50%, -50%) rotate(270deg) scale(1)';
     }).catch(e => {
         console.error("Audio playback requires user interaction. Click the page and try again.");
@@ -1095,7 +1036,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
         overlay.remove();
     });
 
-    // Temizleme (3.5 Saniye Sonra)
     setTimeout(() => {
         img.style.transform = 'translate(-50%, -50%) rotate(270deg) scale(0)';
         overlay.style.opacity = '0';
@@ -1106,7 +1046,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     }, 3500);
   }
 
-  // ---- MATRIX Easter Egg ----
   function triggerMatrix() {
     appendLine('<span class="highlight-green">💊 Wake up, Neo...</span>');
     scrollTerminal();
@@ -1147,7 +1086,6 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
 
     drawMatrix();
 
-    // Stop after 3 seconds
     setTimeout(() => {
       cancelAnimationFrame(frameId);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1155,21 +1093,15 @@ to see how deep the rabbit hole goes? 💊`, owner: 'root', group: 'root', mode:
     }, 3000);
   }
 
-  // Auto-run whoami after boot
   setTimeout(() => {
     appendLine(`<span class="prompt">${currentPrompt()}&nbsp;</span><span class="command">whoami</span>`);
     appendLine(COMMANDS.whoami());
     scrollTerminal();
   }, 1600);
 
-  // Set initial prompt
   updatePromptUI();
 }
 
-
-/* ============================================
-   NAVIGATION — scroll-based active state
-   ============================================ */
 function initNavigation() {
   const navToggle = document.getElementById('nav-toggle');
   const mobileNav = document.getElementById('mobile-nav');
@@ -1190,7 +1122,6 @@ function initNavigation() {
     });
   });
 
-  // Scroll spy
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1205,10 +1136,6 @@ function initNavigation() {
   sections.forEach(s => observer.observe(s));
 }
 
-
-/* ============================================
-   SCROLL REVEAL
-   ============================================ */
 function initScrollReveal() {
   const targets = document.querySelectorAll(
     '.core-card, .project-card, .certs-accordion, .contact-terminal, .section-header, .scoreboard-terminal'
@@ -1226,7 +1153,6 @@ function initScrollReveal() {
 
   targets.forEach(el => observer.observe(el));
 
-  // Scoreboard stagger
   const scoreRows = document.querySelectorAll('.score-row');
   const scoreObs  = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -1241,10 +1167,6 @@ function initScrollReveal() {
   if (board) scoreObs.observe(board);
 }
 
-
-/* ============================================
-   PROJECT FILTERS
-   ============================================ */
 function initProjectFilters() {
   const filterBtns  = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -1282,10 +1204,6 @@ function initProjectFilters() {
   });
 }
 
-
-/* ============================================
-   PROJECT MODAL
-   ============================================ */
 function initProjectModal() {
   const modal       = document.getElementById('project-modal');
   const closeBtn    = document.getElementById('modal-close');
@@ -1301,7 +1219,6 @@ function initProjectModal() {
   document.querySelectorAll('.project-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
-      // Don't open modal when clicking the "Detaylı Oku" button
       if (e.target.classList.contains('project-read-btn')) return;
 
       const title  = card.dataset.title  || '';
@@ -1340,10 +1257,6 @@ function initProjectModal() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 }
 
-
-/* ============================================
-   CERTIFICATION ACCORDION
-   ============================================ */
 function initCertsAccordion() {
   const headers = document.querySelectorAll('.cert-group-header');
 
@@ -1352,20 +1265,17 @@ function initCertsAccordion() {
       const body = header.nextElementSibling;
       const isOpen = header.getAttribute('aria-expanded') === 'true';
 
-      // Close all others
       headers.forEach(h => {
         h.setAttribute('aria-expanded', 'false');
         const b = h.nextElementSibling;
         if (b) b.classList.remove('open');
       });
 
-      // Toggle this one
       if (!isOpen) {
         header.setAttribute('aria-expanded', 'true');
         if (body) body.classList.add('open');
       }
 
-      // if the big one closed then scroll to certs section to prevent disorientation
       const certsSection = document.getElementById('certs');
       if (certsSection) {
         certsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1374,10 +1284,6 @@ function initCertsAccordion() {
   });
 }
 
-
-/* ============================================
-   COUNTER ANIMATION
-   ============================================ */
 function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
   const observer = new IntersectionObserver(entries => {
@@ -1402,12 +1308,7 @@ function animateCount(el, start, end, dur) {
   requestAnimationFrame(update);
 }
 
-
-/* ============================================
-   CORE VISUALS (Neural Net & Shield)
-   ============================================ */
 function initCoreVisuals() {
-  // Neural Net
   const neuralNet = document.getElementById('neural-net');
   if (neuralNet) {
     const canvas = document.createElement('canvas');
@@ -1446,7 +1347,6 @@ function initCoreVisuals() {
     })(0);
   }
 
-  // Shield / Matrix rain
   const shieldAnim = document.getElementById('shield-anim');
   if (shieldAnim) {
     const canvas = document.createElement('canvas');
