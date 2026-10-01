@@ -32,7 +32,7 @@
 > 🛡️ **Security:** Top 1% Global TryHackMe | Zero-Day Vulnerability Researcher
 > ⚙️ **Engineering:** Low-level AI Optimization | C-API | Distributed Systems
 > 🔬 **Research:** Published "The Reasoner's Dilemma" on AGI Cognitive Frameworks
-> 🏢 **Industry:** Microsoft AI Innovators Internship & Privia Security Assessments
+> 🏢 **Industry:** Microsoft AI Innovators Internship
 > 🎯 **Status:** Architecting enterprise-scale edge AI systems and hunting zero-days.
 
 <br/>
