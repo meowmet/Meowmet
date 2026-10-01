@@ -11,10 +11,10 @@
 
 ### `$ cat profile.txt`
 
-> 🚀 Architecting **AgenticVMM**, an O(1) distributed memory engine (Microsoft AI Innovators Capstone).
-> 🛡️ Discovering real-world vulnerabilities (PixVerse BAC Zero-Day).
-> 🧠 Creator of **SymboLang** benchmark for testing LLM syntax drift.
-> 🎓 4th-year Computer Engineering Student. AI Systems Architect & Offensive Security Researcher.
+> ⚙️ **AI Systems Engineering:** Architecting **AgenticVMM**, an O(1) distributed memory engine for Edge AI (Microsoft Capstone).
+> 🔬 **AGI Research:** Creator of the **SymboLang** benchmark, exposing syntax drift and executive function failures in frontier LLMs.
+> 🛡️ **Offensive Security:** Discovering real-world zero-day vulnerabilities (e.g., PixVerse BAC) and bypassing access controls.
+> 🎓 4th-year Computer Engineering Student. Bridging hardware-level AI architecture and offensive security.
 > 🌐 Access: [meowmet.github.io](https://meowmet.github.io/)
 
 ### `$ ls -projects`
@@ -27,12 +27,13 @@
 | **FASPA** | Fast and Secure Personal Assistant with AES-encryption. | `C++`, `Local AI` | Open Source |
 | **Bahasakedi** | Bilingual Turkish-Indonesian language learning platform. | `Web`, `Content` | Active |
 
-### `$ fetch --metrics`
+### `$ fetch --capabilities`
 
-> 🛡️ **TryHackMe:** Top 1% Global Offensive Security Researcher
-> 🏢 **Industry:** Microsoft AI Innovators & Privia Security Assessments
-> 📊 **Kaggle:** Top 7% (ING Datathon) | Top 25% (Akkadian Translation)
-> 🎯 **Status:** Architecting enterprise-scale systems and hunting zero-days.
+> 🛡️ **Security:** Top 1% Global TryHackMe | Zero-Day Vulnerability Researcher
+> ⚙️ **Engineering:** Low-level AI Optimization | C-API | Distributed Systems
+> 🔬 **Research:** Published "The Reasoner's Dilemma" on AGI Cognitive Frameworks
+> 🏢 **Industry:** Microsoft AI Innovators Internship & Privia Security Assessments
+> 🎯 **Status:** Architecting enterprise-scale edge AI systems and hunting zero-days.
 
 <br/>
 
